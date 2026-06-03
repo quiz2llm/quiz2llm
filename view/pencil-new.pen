@@ -7,7 +7,9 @@
       "x": 21,
       "y": 56,
       "name": "home - guest view",
-      "reusable": true,
+      "theme": {
+        "light theme": "Variant"
+      },
       "clip": true,
       "width": "fill_container(700)",
       "height": "fill_container(600)",
@@ -386,7 +388,9 @@
       "x": 761,
       "y": 56,
       "name": "home - adm view",
-      "reusable": true,
+      "theme": {
+        "light theme": "Variant"
+      },
       "clip": true,
       "width": "fill_container(700)",
       "height": "fill_container(600)",
@@ -1124,6 +1128,9 @@
       "y": -413,
       "name": "quiz_detail",
       "context": "pagina que aparece quando clica na thumbnail",
+      "theme": {
+        "light theme": "Variant"
+      },
       "clip": true,
       "width": 464,
       "height": 469,
@@ -1213,6 +1220,9 @@
       "y": 656,
       "name": "new_quiz_form",
       "context": "pagina que aparece quando clica no botao de novo quiz \né como o componente de detalhes mas seus campos sao inputs",
+      "theme": {
+        "light theme": "Variant"
+      },
       "clip": true,
       "width": 464,
       "height": 469,
@@ -1281,8 +1291,79 @@
     }
   ],
   "themes": {
-    "Theme": [
+    "light theme": [
       "Variant"
+    ],
+    "dark theme": [
+      "Default"
     ]
+  },
+  "variables": {
+    "background": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#ffffff",
+          "theme": {
+            "light theme": "Variant"
+          }
+        }
+      ]
+    },
+    "text_black": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#000000",
+          "theme": {
+            "light theme": "Variant"
+          }
+        }
+      ]
+    },
+    "text_white": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#ffffff",
+          "theme": {
+            "light theme": "Variant"
+          }
+        }
+      ]
+    },
+    "color": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#000000",
+          "theme": {
+            "dark theme": "Default"
+          }
+        }
+      ]
+    },
+    "black_text": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#000000",
+          "theme": {
+            "dark theme": "Default"
+          }
+        }
+      ]
+    },
+    "white_text": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#ffffff",
+          "theme": {
+            "dark theme": "Default"
+          }
+        }
+      ]
+    }
   }
 }
