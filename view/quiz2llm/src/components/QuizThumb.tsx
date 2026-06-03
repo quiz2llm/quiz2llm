@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Card, Typography, Space, Button, Tooltip } from 'antd'
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
 import type { CSSProperties } from 'react'
@@ -6,19 +7,25 @@ interface QuizThumbProps {
   title: string
   date: string
   showActions?: boolean
+  onClick?: () => void
 }
 
-export function QuizThumb({ title, date, showActions }: QuizThumbProps) {
+export function QuizThumb({ title, date, showActions, onClick }: QuizThumbProps) {
+  const [hovered, setHovered] = useState(false)
+
   return (
     <Card
       hoverable
       size="small"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      onClick={onClick}
       styles={{
         body: { padding: 0, position: 'relative' as CSSProperties['position'] },
       }}
       style={{ width: 130, borderRadius: 6, overflow: 'hidden', position: 'relative' }}
     >
-      {showActions && (
+      {showActions && hovered && (
         <Space style={{ position: 'absolute', top: 2, left: 4, zIndex: 1 }}>
           <Tooltip title="Edit">
             <Button
@@ -27,11 +34,12 @@ export function QuizThumb({ title, date, showActions }: QuizThumbProps) {
               icon={<EditOutlined />}
               shape="circle"
               style={{ width: 20, height: 20, minWidth: 20 }}
+              onClick={(e) => e.stopPropagation()}
             />
           </Tooltip>
         </Space>
       )}
-      {showActions && (
+      {showActions && hovered && (
         <div style={{ position: 'absolute', top: 2, right: 4, zIndex: 1 }}>
           <Tooltip title="Delete">
             <Button
@@ -40,6 +48,7 @@ export function QuizThumb({ title, date, showActions }: QuizThumbProps) {
               icon={<DeleteOutlined />}
               shape="circle"
               style={{ width: 20, height: 20, minWidth: 20 }}
+              onClick={(e) => e.stopPropagation()}
             />
           </Tooltip>
         </div>
