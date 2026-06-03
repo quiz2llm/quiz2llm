@@ -17,7 +17,6 @@ export function HomeAdmin({ quizes, onQuizClick, onNewQuiz }: HomeAdminProps) {
       <Header role="admin" />
       <div style={{ flex: 1, padding: '24px 16px' }}>
         <Flex vertical gap={16} align="center">
-          <CreateNewQuiz onClick={onNewQuiz} />
           <Flex wrap gap={12} justify="center">
             {quizes.map((q) => (
               <QuizThumb
@@ -29,6 +28,7 @@ export function HomeAdmin({ quizes, onQuizClick, onNewQuiz }: HomeAdminProps) {
               />
             ))}
           </Flex>
+          <CreateNewQuiz onClick={onNewQuiz} />
         </Flex>
       </div>
       <Footer />

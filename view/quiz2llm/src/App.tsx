@@ -60,7 +60,7 @@ function App() {
   return (
     <ConfigProvider theme={themeConfig}>
       <Layout style={{ minHeight: '100vh' }}>
-        <Layout.Content style={{ maxWidth: 700, margin: '0 auto', width: '100%' }}>
+        <Layout.Content style={{ margin: '0 auto', width: '100%' }}>
           <div
             style={{
               display: 'flex',

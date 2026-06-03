@@ -4,7 +4,7 @@ import { theme } from 'antd'
 export type ThemeMode = 'light' | 'dark'
 
 export function useTheme() {
-  const [mode, setMode] = useState<ThemeMode>('light')
+  const [mode, setMode] = useState<ThemeMode>('dark')
 
   const toggleTheme = useCallback(() => {
     setMode((prev) => (prev === 'light' ? 'dark' : 'light'))
