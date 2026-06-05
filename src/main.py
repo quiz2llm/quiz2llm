@@ -1,9 +1,10 @@
 from fastapi import FastAPI
+from .infra.db import get_conection
 
 app = FastAPI()
 
 def run():
-    print('adiburai')
 
-if __name__ ==('main'):
+if __name__=='__main__':
+    get_conection()
     run()
