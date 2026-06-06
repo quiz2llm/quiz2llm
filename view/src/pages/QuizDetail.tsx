@@ -23,16 +23,20 @@ export function QuizDetail({ quiz, onBack }: QuizDetailProps) {
         {quiz.title}
       </Typography.Title>
 
+      <Typography.Text type="secondary" style={{ fontSize: 13 }}>
+        estudante: {quiz.student}
+      </Typography.Text>
+
       <Typography.Paragraph
-        style={{ marginBottom: 24, fontSize: 16 }}
+        style={{ marginBottom: 24, fontSize: 16, marginTop: 12 }}
       >
-        {quiz.description}
+        {quiz.main_text}
       </Typography.Paragraph>
 
       <Divider />
 
       <Space direction="vertical" size={12} style={{ width: '100%' }}>
-        {quiz.questions.map((q, i) => (
+        {quiz.question?.map((q, i) => (
           <Typography.Text key={i} style={{ fontSize: 16 }}>
             {i + 1}. {q}
           </Typography.Text>

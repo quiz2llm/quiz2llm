@@ -1,26 +1,14 @@
-import { useState } from 'react'
-import { ConfigProvider, Layout, Switch, Space, Segmented } from 'antd'
+import { useState, useEffect, useCallback } from 'react'
+import { ConfigProvider, Layout, Switch, Space, Segmented, Spin } from 'antd'
 import { useTheme } from './hooks/useTheme'
 import { HomeGuest } from './pages/HomeGuest'
 import { HomeAdmin } from './pages/HomeAdmin'
 import { QuizDetail } from './pages/QuizDetail'
 import { NewQuizForm } from './pages/NewQuizForm'
+import { fetchQuizzes, deleteQuiz, type QuizResponse } from './services/quizApi'
 
-export interface Quiz {
-  id: string
-  title: string
-  date: string
-  description: string
-  questions: string[]
-}
-
-const MOCK_QUIZES: Quiz[] = [
-  { id: '1', title: 'React', date: '01/06', description: 'Conceitos fundamentais do React', questions: ['O que é React?', 'O que é JSX?', 'O que são hooks?'] },
-  { id: '2', title: 'Node.js', date: '02/06', description: 'Fundamentos do Node.js', questions: ['O que é Node.js?', 'O que é npm?', 'O que é event loop?'] },
-  { id: '3', title: 'CSS', date: '03/06', description: 'Conceitos de CSS', questions: ['O que é flexbox?', 'O que é grid?', 'O que é especificidade?'] },
-  { id: '4', title: 'TS', date: '04/06', description: 'Conceitos de TypeScript', questions: ['O que é TypeScript?', 'O que são tipos?', 'O que é interface?'] },
-  { id: '5', title: 'Git', date: '05/06', description: 'Comandos básicos do Git', questions: ['O que é git?', 'O que é commit?', 'O que é branch?'] },
-]
+export type { QuizResponse }
+export type Quiz = QuizResponse
 
 type Role = 'guest' | 'admin'
 type Page = 'home' | 'quiz-detail' | 'new-quiz'
@@ -30,6 +18,33 @@ function App() {
   const [role, setRole] = useState<Role>('guest')
   const [page, setPage] = useState<Page>('home')
   const [selectedQuiz, setSelectedQuiz] = useState<Quiz | null>(null)
+  const [quizzes, setQuizzes] = useState<Quiz[]>([])
+  const [loading, setLoading] = useState(true)
+
+  const loadQuizzes = useCallback(async () => {
+    setLoading(true)
+    try {
+      const data = await fetchQuizzes()
+      setQuizzes(data)
+    } catch (err) {
+      console.error('Failed to load quizzes', err)
+    } finally {
+      setLoading(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    loadQuizzes()
+  }, [loadQuizzes])
+
+  const handleDelete = useCallback(async (id: string) => {
+    try {
+      await deleteQuiz(id)
+      setQuizzes((prev) => prev.filter((q) => q.id !== id))
+    } catch (err) {
+      console.error('Failed to delete quiz', err)
+    }
+  }, [])
 
   const goHome = () => setPage('home')
 
@@ -50,7 +65,7 @@ function App() {
       <ConfigProvider theme={themeConfig}>
         <Layout style={{ minHeight: '100vh' }}>
           <Layout.Content style={{ maxWidth: 700, margin: '0 auto', width: '100%' }}>
-            <NewQuizForm onBack={goHome} />
+            <NewQuizForm onBack={goHome} onCreated={loadQuizzes} />
           </Layout.Content>
         </Layout>
       </ConfigProvider>
@@ -87,16 +102,22 @@ function App() {
               />
             </Space>
           </div>
-          {role === 'guest' ? (
+
+          {loading ? (
+            <div style={{ textAlign: 'center', paddingTop: 80 }}>
+              <Spin size="large" />
+            </div>
+          ) : role === 'guest' ? (
             <HomeGuest
-              quizes={MOCK_QUIZES}
+              quizzes={quizzes}
               onQuizClick={(q) => { setSelectedQuiz(q); setPage('quiz-detail') }}
             />
           ) : (
             <HomeAdmin
-              quizes={MOCK_QUIZES}
+              quizzes={quizzes}
               onQuizClick={(q) => { setSelectedQuiz(q); setPage('quiz-detail') }}
               onNewQuiz={() => setPage('new-quiz')}
+              onDelete={handleDelete}
             />
           )}
         </Layout.Content>

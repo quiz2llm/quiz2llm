@@ -1,15 +1,18 @@
 import { useState } from 'react'
-import { Typography, Button, Input, Divider, Space } from 'antd'
+import { Typography, Button, Input, Divider, Space, message } from 'antd'
 import { ArrowLeftOutlined, PlusOutlined, MinusCircleOutlined } from '@ant-design/icons'
+import { createQuiz } from '../services/quizApi'
 
 interface NewQuizFormProps {
   onBack: () => void
+  onCreated: () => void
 }
 
-export function NewQuizForm({ onBack }: NewQuizFormProps) {
+export function NewQuizForm({ onBack, onCreated }: NewQuizFormProps) {
   const [title, setTitle] = useState('')
-  const [description, setDescription] = useState('')
+  const [mainText, setMainText] = useState('')
   const [questions, setQuestions] = useState(['', '', ''])
+  const [submitting, setSubmitting] = useState(false)
 
   const addQuestion = () => setQuestions([...questions, ''])
   const removeQuestion = (i: number) => setQuestions(questions.filter((_, idx) => idx !== i))
@@ -19,10 +22,25 @@ export function NewQuizForm({ onBack }: NewQuizFormProps) {
     setQuestions(next)
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!title.trim()) return
-    console.log({ title, description, questions: questions.filter(Boolean) })
-    onBack()
+    setSubmitting(true)
+    try {
+      await createQuiz({
+        title: title.trim(),
+        main_text: mainText.trim(),
+        question: questions.filter(Boolean),
+        student: 'beforeModel',
+      })
+      message.success('Quiz criado com sucesso!')
+      onCreated()
+      onBack()
+    } catch (err) {
+      console.error('Failed to create quiz', err)
+      message.error('Erro ao criar quiz')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -47,10 +65,10 @@ export function NewQuizForm({ onBack }: NewQuizFormProps) {
           onChange={(e) => setTitle(e.target.value)}
         />
         <Input.TextArea
-          placeholder="Descrição do quiz"
+          placeholder="Texto principal"
           rows={3}
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          value={mainText}
+          onChange={(e) => setMainText(e.target.value)}
         />
       </Space>
 
@@ -83,7 +101,7 @@ export function NewQuizForm({ onBack }: NewQuizFormProps) {
       <Divider />
 
       <Space>
-        <Button type="primary" onClick={handleSubmit} disabled={!title.trim()}>
+        <Button type="primary" onClick={handleSubmit} disabled={!title.trim()} loading={submitting}>
           salvar
         </Button>
         <Button onClick={onBack}>cancelar</Button>
