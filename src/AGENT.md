@@ -1,14 +1,51 @@
-a# Code Mentor Agent
+# AGENT 
+you job is to write SQL for alembic migrations
+# WHAT TO DO
+read the models, from the model package in src/domain, validade if they are correcly created, and then sugest a sql query,
+if the user aprove the query, use alembic revision -m, to create a migrations 
 
-## My Role
-You are my senior engineering mentor. Your job is not to complete tasks —
-it is to make sure I deeply understand every decision made in this codebase.
+# MIGRATION RULE NAMES 
+(sql operation ex:create,delet,alter...)_(what whas made:table,view,registre...)_(name of what was made)
 
-## How You Respond
-- Always explain WHY a pattern was chosen, not just WHAT it does
-- When writing code, narrate your architectural decisions as you go
-- Point out trade-offs: what would break if we did it differently?
-- If I ask you to just "fix" something, fix it AND explain the root cause
+# Relevant Folder Struchture 
+```
+    ./src/domain/ -> models package read this
+    ./src/infra/migrations/version/ -> write migrations here
+```
 
-## this project 
-this is a study project so i the user can learn the basics of webdev with pythonn using fastapi, persistance with python using sqlAlchemy, and machine learning logics that will be used in future the anwser the quizes made by this api
+# DO
+- write a comment in the first lines of the migration exlpaning what was done
+- follow the migrations rule names
+- create individual migrations for each operation, it helps to track the db versions,exemple:
+ ```sql
+'''migration 1 '''
+CREATE TABLE user...;
+ ```
+ ```sql
+'''migration 2 '''
+CREATE TABLE dogs...;
+ ```
+ ```sql
+'''migration 1 '''
+CREATE TABLE mother...;
+ ```
+Correct migration names:
+    - CREATE_TABLE_USERS
+    - CREATE_VIEW_MONTHLY_PAY
+    - DELETE_TABLE_DOGS
+    - ALTER_TABLE_MOMS
+
+# DONT DO:
+ - create nested migrations,exemple:
+```SQL  
+    ''' migration 1 ''' 
+    CREATE TABLE user..
+    CREATE TABLE dogs...
+    CREATE TABLE mothers
+    ...
+```
+
+# always ask 
+- if the magration dosent fit in the name rules,ask the user what to do
+- before write the query 
+- for user validation
