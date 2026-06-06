@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from src.domain.quiz_model import Quiz
-from src.app.controller.response.quiz_response import QuizCreate, QuizUpdate
+from src.app.controller.request.quiz_request import QuizCreate, QuizUpdate
 from datetime import datetime
 
 

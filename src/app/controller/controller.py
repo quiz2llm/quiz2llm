@@ -2,12 +2,15 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
 from src.infra.db.session import get_session
-from src.app.controller.response.quiz_response import QuizCreate, QuizResponse, QuizUpdate
 from src.app.service.quiz_service import QuizService
 
 router = APIRouter(prefix="/quiz", tags=["quiz"])
 service = QuizService()
 
+# response 
+from src.app.controller.response.quiz_response import QuizResponse
+# request
+from src.app.controller.request.quiz_request import QuizCreate, QuizUpdate
 
 @router.post("", response_model=QuizResponse, status_code=201)
 def create_quiz(payload: QuizCreate, session: Session = Depends(get_session)):

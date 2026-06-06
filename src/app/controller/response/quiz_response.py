@@ -1,18 +1,6 @@
 from pydantic import BaseModel
-
-
-class QuizCreate(BaseModel):
-    title: str
-    main_text: str
-    question: Optional[list[str]] = None
-    student: str
-
-
-class QuizUpdate(BaseModel):
-    title: Optional[str] = None
-    main_text: Optional[str] = None
-    question: Optional[list[str]] = None
-    student: Optional[str] = None
+from datetime import datetime
+from typing import Optional
 
 
 class QuizResponse(BaseModel):
