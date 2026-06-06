@@ -1,0 +1,93 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="igzBMxvxT7UzUusbMF8T">
+    <mxGraphModel dx="1331" dy="1941" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-1" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="front" vertex="1">
+          <mxGeometry height="80" width="80" x="200" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-12" edge="1" parent="1" source="5V-dUUHWRP8CjuZsyH9m-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="5V-dUUHWRP8CjuZsyH9m-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-14" edge="1" parent="1" source="5V-dUUHWRP8CjuZsyH9m-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="5V-dUUHWRP8CjuZsyH9m-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-2" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;backend&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="320" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-11" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=50;" value="non-relational_db&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="140" x="490" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-59" edge="1" parent="5V-dUUHWRP8CjuZsyH9m-11" source="5V-dUUHWRP8CjuZsyH9m-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-8" parent="5V-dUUHWRP8CjuZsyH9m-11" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="ansers" vertex="1">
+          <mxGeometry height="80" width="60" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-13" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="250" width="140" x="490" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-9" parent="5V-dUUHWRP8CjuZsyH9m-13" style="swimlane;whiteSpace=wrap;html=1;startSize=50;" value="relational_db&lt;br&gt;&lt;br&gt;mysql" vertex="1">
+          <mxGeometry height="250" width="140" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-10" connectable="0" parent="5V-dUUHWRP8CjuZsyH9m-13" style="group" value="" vertex="1">
+          <mxGeometry height="130" width="60" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-55" edge="1" parent="5V-dUUHWRP8CjuZsyH9m-10" source="5V-dUUHWRP8CjuZsyH9m-6" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-6" parent="5V-dUUHWRP8CjuZsyH9m-10" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="quizes" vertex="1">
+          <mxGeometry height="80" width="60" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-7" parent="5V-dUUHWRP8CjuZsyH9m-10" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="users" vertex="1">
+          <mxGeometry height="80" width="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-52" edge="1" parent="1" source="5V-dUUHWRP8CjuZsyH9m-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=1;" target="5V-dUUHWRP8CjuZsyH9m-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-45" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" value="user" vertex="1">
+          <mxGeometry height="120" width="160" x="720" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-46" parent="5V-dUUHWRP8CjuZsyH9m-45" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" value="&lt;div&gt;- name&lt;/div&gt;&lt;div&gt;- uuid&lt;/div&gt;&lt;div&gt;- when_created&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="160" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-47" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" value="&lt;div&gt;quiz&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="160" x="720" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-48" parent="5V-dUUHWRP8CjuZsyH9m-47" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" value="&lt;div&gt;- main_text&lt;/div&gt;&lt;div&gt;- uuid&lt;br&gt;- question&lt;/div&gt;&lt;div&gt;- opt_question&lt;/div&gt;&lt;div&gt;- studant&lt;/div&gt;&lt;div&gt;- when_createt&lt;/div&gt;&lt;div&gt;- when_awnserd&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="160" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-54" edge="1" parent="1" source="5V-dUUHWRP8CjuZsyH9m-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="5V-dUUHWRP8CjuZsyH9m-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="&lt;div&gt;user, is the abstraction for three type of users:&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;guests - no acount only see the quizzes and answers&lt;/div&gt;&lt;div&gt;&lt;br&gt;writers - does that can create quizes&lt;/div&gt;&lt;div&gt;&lt;br&gt;studants - for the models that will try to anwser&amp;nbsp;&lt;br&gt;&lt;br&gt;fulladim - does everithing&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="240" x="430" y="-360" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;fontStyle=0" value="&lt;div&gt;for now only guest and full-admin for the mvp&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="110" x="690" y="-460" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-56" edge="1" parent="1" source="5V-dUUHWRP8CjuZsyH9m-7" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="5V-dUUHWRP8CjuZsyH9m-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-60" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="i have no ideia what the anwser will be" vertex="1">
+          <mxGeometry height="60" width="120" x="685" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-62" edge="1" parent="1" source="5V-dUUHWRP8CjuZsyH9m-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="5V-dUUHWRP8CjuZsyH9m-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5V-dUUHWRP8CjuZsyH9m-61" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Actor" vertex="1">
+          <mxGeometry height="60" width="30" x="70" y="370" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,9 +1,5 @@
 from fastapi import FastAPI
+from src.app.controller import router
 
 app = FastAPI()
-
-def run():
-    print('adiburai')
-
-if __name__ ==('main'):
-    run()
+app.include_router(router)
