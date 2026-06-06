@@ -176,6 +176,12 @@
                 <mxCell id="zAn1rP0nZkr6dhjPxj9I-53" value="as primeiras respostas devem ser avaliadas e marcadas como corretas ou nao por um humano&lt;br&gt;&lt;br&gt;apos isso vou tentar fazer esse processo com um modelo" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#F5EBF5;" vertex="1" parent="1">
                     <mxGeometry x="910" y="100" width="170" height="130" as="geometry"/>
                 </mxCell>
+                <mxCell id="zAn1rP0nZkr6dhjPxj9I-66" value="anwser" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fontColor=#F5EBF5;" vertex="1" parent="1">
+                    <mxGeometry x="930" y="250" width="190" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="zAn1rP0nZkr6dhjPxj9I-67" value="- quem respondeu&#10;- quando foi respondida&#10;- qual foi a resposta&#10;- qual foi o quiz respondido&#10;- esta coreto?&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#F5EBF5;" vertex="1" parent="zAn1rP0nZkr6dhjPxj9I-66">
+                    <mxGeometry y="30" width="190" height="100" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
