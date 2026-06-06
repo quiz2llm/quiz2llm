@@ -1,18 +1,21 @@
 services:
   db:
     image: mysql
-    container_name: MySql
+    container_name: quiz_mysql_db
+
+    env_file: .env
 
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: $(MYSQL_PASS)
-      MYSQL_DATABASE: ${MYSQL_NAME}
+      MYSQL_ROOT_PASSWORD: ${ROOT_PASS}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASS}
+      MYSQL_DATABASE: ${DB_NAME}
 
     ports:
-      - '3306:3306'
+      - '${DB_PORT}:${DB_PORT}'
     volumes:
       - db_data:/var/lib/mysql
+
 volumes:
   db_data:
 
