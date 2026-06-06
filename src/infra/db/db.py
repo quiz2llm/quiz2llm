@@ -15,7 +15,6 @@ def get_conection():
             f"mysql+pymysql://{DB_USER}:{DB_PASS}@{HOST}:{DB_PORT}/{DB_NAME}"
         )
         print('conectado com sucesso')
-        print(engine)
         return engine
     except Exception as e :
         print('erro ao conectar ao servido \n',e)

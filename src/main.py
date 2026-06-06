@@ -1,13 +1,5 @@
 from fastapi import FastAPI
-from .infra.db import get_conection
+from src.app.controller import router
 
 app = FastAPI()
-
-def run():
-    '''
-    entry point
-    '''
-
-if __name__=='__main__':
-    get_conection()
-    run()
+app.include_router(router)
