@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Card, Typography, Space, Button, Tooltip } from 'antd'
-import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
+import { DeleteOutlined } from '@ant-design/icons'
 import type { CSSProperties } from 'react'
 
 interface QuizThumbProps {
@@ -8,9 +8,10 @@ interface QuizThumbProps {
   date: string
   showActions?: boolean
   onClick?: () => void
+  onDelete?: () => void
 }
 
-export function QuizThumb({ title, date, showActions, onClick }: QuizThumbProps) {
+export function QuizThumb({ title, date, showActions, onClick, onDelete }: QuizThumbProps) {
   const [hovered, setHovered] = useState(false)
 
   return (
@@ -26,20 +27,6 @@ export function QuizThumb({ title, date, showActions, onClick }: QuizThumbProps)
       style={{ width: 130, borderRadius: 6, overflow: 'hidden', position: 'relative' }}
     >
       {showActions && hovered && (
-        <Space style={{ position: 'absolute', top: 2, left: 4, zIndex: 1 }}>
-          <Tooltip title="Edit">
-            <Button
-              type="text"
-              size="small"
-              icon={<EditOutlined />}
-              shape="circle"
-              style={{ width: 20, height: 20, minWidth: 20 }}
-              onClick={(e) => e.stopPropagation()}
-            />
-          </Tooltip>
-        </Space>
-      )}
-      {showActions && hovered && (
         <div style={{ position: 'absolute', top: 2, right: 4, zIndex: 1 }}>
           <Tooltip title="Delete">
             <Button
@@ -48,7 +35,7 @@ export function QuizThumb({ title, date, showActions, onClick }: QuizThumbProps)
               icon={<DeleteOutlined />}
               shape="circle"
               style={{ width: 20, height: 20, minWidth: 20 }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e) => { e.stopPropagation(); onDelete?.() }}
             />
           </Tooltip>
         </div>
