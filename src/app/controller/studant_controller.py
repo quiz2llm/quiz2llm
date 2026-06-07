@@ -1,8 +1,17 @@
-from src.main import app
-from src.app.service.student_service import student_service 
+from fastapi import APIRouter, Depends , HTTPException
+from sqlalchemy.orm import Session
 
-@app.post('')
-def create_studant():
-    '''
-    
-    '''
+from src.infra.db.session import get_session
+
+from src.app.service.student_service import student_service 
+from src.app.controller.response.student_response import student_response
+from src.app.controller.request.student_request import create_student
+
+router = APIRouter(prefix='/student',tags=['student'])
+service = student_service()
+
+@app.post('',response_model=student_response,status_code=201)
+def create_studant(payload:create_student, session: Session = Depends(get_session)):
+    print(session)
+    print(payload)
+    # return service.create()
