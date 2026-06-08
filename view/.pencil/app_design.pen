@@ -8,12 +8,12 @@
       "y": 56,
       "name": "home - guest view",
       "theme": {
-        "light theme": "Variant"
+        "default": "dark"
       },
       "clip": true,
       "width": "fill_container(700)",
       "height": "fill_container(600)",
-      "fill": "$bg",
+      "fill": "$background",
       "layout": "vertical",
       "alignItems": "center",
       "children": [
@@ -25,7 +25,7 @@
           "clip": true,
           "width": 697,
           "height": 34,
-          "fill": "$surface",
+          "fill": "$background",
           "layout": "none",
           "children": [
             {
@@ -34,7 +34,7 @@
               "x": 324,
               "y": 7,
               "name": "tittle",
-              "fill": "$text-primary",
+              "fill": "$text_primary",
               "content": "quizes",
               "fontFamily": "Inter",
               "fontSize": 16,
@@ -46,7 +46,7 @@
               "x": 15,
               "y": 7,
               "name": "user_role",
-              "fill": "$text-primary",
+              "fill": "$text_primary",
               "content": "ROLE",
               "fontFamily": "Inter",
               "fontSize": 16,
@@ -58,7 +58,7 @@
               "x": 15,
               "y": 30,
               "name": "hr",
-              "fill": "$divider",
+              "fill": "$text_primary",
               "width": 654,
               "height": 5
             }
@@ -71,7 +71,7 @@
           "clip": true,
           "width": "fill_container",
           "height": "fill_container",
-          "fill": "$surface",
+          "fill": "$background",
           "layout": "vertical",
           "alignItems": "center",
           "children": [
@@ -82,7 +82,7 @@
               "clip": true,
               "width": 682,
               "height": 105,
-              "fill": "$surface",
+              "fill": "$background",
               "justifyContent": "space_between",
               "alignItems": "center",
               "children": [
@@ -93,7 +93,7 @@
                   "clip": true,
                   "width": 128,
                   "height": 87,
-                  "fill": "$surface",
+                  "fill": "$background",
                   "layout": "none",
                   "children": [
                     {
@@ -102,10 +102,10 @@
                       "x": 9,
                       "y": 7,
                       "name": "quiz_card",
-                      "fill": "$card-bg",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 80,
-                      "stroke": "$border",
+                      "stroke": "$background",
                       "strokeWidth": 1,
                       "strokeAlignment": "inner"
                     },
@@ -114,7 +114,7 @@
                       "id": "tV9kF",
                       "x": 9,
                       "y": 52,
-                      "fill": "$card-footer",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 35
                     },
@@ -123,7 +123,7 @@
                       "id": "L6nDa",
                       "x": 49,
                       "y": 52,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "titulo",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -134,7 +134,7 @@
                       "id": "wYMUL",
                       "x": 49,
                       "y": 68,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "data",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -149,7 +149,7 @@
                   "clip": true,
                   "width": 129,
                   "height": 87,
-                  "fill": "$surface",
+                  "fill": "$background",
                   "layout": "none",
                   "children": [
                     {
@@ -158,10 +158,10 @@
                       "x": 9,
                       "y": 7,
                       "name": "quiz_card",
-                      "fill": "$card-bg",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 80,
-                      "stroke": "$border",
+                      "stroke": "$background",
                       "strokeWidth": 1,
                       "strokeAlignment": "inner"
                     },
@@ -170,7 +170,7 @@
                       "id": "jFvRn",
                       "x": 9,
                       "y": 52,
-                      "fill": "$card-footer",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 35
                     },
@@ -179,7 +179,7 @@
                       "id": "j8IT6J",
                       "x": 49,
                       "y": 52,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "titulo",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -190,7 +190,7 @@
                       "id": "H1bb6",
                       "x": 49,
                       "y": 68,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "data",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -205,7 +205,7 @@
                   "clip": true,
                   "width": 129,
                   "height": 87,
-                  "fill": "$surface",
+                  "fill": "$background",
                   "layout": "none",
                   "children": [
                     {
@@ -214,10 +214,10 @@
                       "x": 9,
                       "y": 7,
                       "name": "quiz_card",
-                      "fill": "$card-bg",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 80,
-                      "stroke": "$border",
+                      "stroke": "$background",
                       "strokeWidth": 1,
                       "strokeAlignment": "inner"
                     },
@@ -226,7 +226,7 @@
                       "id": "xbBcy",
                       "x": 9,
                       "y": 52,
-                      "fill": "$card-footer",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 35
                     },
@@ -235,7 +235,7 @@
                       "id": "bYQjH",
                       "x": 49,
                       "y": 52,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "titulo",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -246,7 +246,7 @@
                       "id": "aD340",
                       "x": 49,
                       "y": 68,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "data",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -261,7 +261,7 @@
                   "clip": true,
                   "width": 129,
                   "height": 87,
-                  "fill": "$surface",
+                  "fill": "$background",
                   "layout": "none",
                   "children": [
                     {
@@ -270,10 +270,10 @@
                       "x": 9,
                       "y": 7,
                       "name": "quiz_card",
-                      "fill": "$card-bg",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 80,
-                      "stroke": "$border",
+                      "stroke": "$background",
                       "strokeWidth": 1,
                       "strokeAlignment": "inner"
                     },
@@ -282,7 +282,7 @@
                       "id": "HCFny",
                       "x": 9,
                       "y": 52,
-                      "fill": "$card-footer",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 35
                     },
@@ -291,7 +291,7 @@
                       "id": "gKmtd",
                       "x": 49,
                       "y": 52,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "titulo",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -302,7 +302,7 @@
                       "id": "FqCCJ",
                       "x": 49,
                       "y": 68,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "data",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -317,7 +317,7 @@
                   "clip": true,
                   "width": 129,
                   "height": 87,
-                  "fill": "$surface",
+                  "fill": "$background",
                   "layout": "none",
                   "children": [
                     {
@@ -326,10 +326,10 @@
                       "x": 9,
                       "y": 7,
                       "name": "quiz_card",
-                      "fill": "$card-bg",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 80,
-                      "stroke": "$border",
+                      "stroke": "$background",
                       "strokeWidth": 1,
                       "strokeAlignment": "inner"
                     },
@@ -338,7 +338,7 @@
                       "id": "p5qj5",
                       "x": 9,
                       "y": 52,
-                      "fill": "$card-footer",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 35
                     },
@@ -347,7 +347,7 @@
                       "id": "hgTJT",
                       "x": 49,
                       "y": 52,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "titulo",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -358,7 +358,7 @@
                       "id": "lgZ4H",
                       "x": 49,
                       "y": 68,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "data",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -377,7 +377,7 @@
           "clip": true,
           "width": "fill_container",
           "height": 136,
-          "fill": "$surface",
+          "fill": "$background",
           "layout": "none"
         }
       ]
@@ -389,12 +389,12 @@
       "y": 56,
       "name": "home - adm view",
       "theme": {
-        "light theme": "Variant"
+        "default": "dark"
       },
       "clip": true,
       "width": "fill_container(700)",
       "height": "fill_container(600)",
-      "fill": "$bg",
+      "fill": "$background",
       "layout": "vertical",
       "alignItems": "center",
       "children": [
@@ -411,7 +411,7 @@
           "clip": true,
           "width": "fill_container",
           "height": "fill_container",
-          "fill": "$surface",
+          "fill": "$background",
           "layout": "vertical",
           "alignItems": "center",
           "children": [
@@ -422,7 +422,7 @@
               "clip": true,
               "width": 682,
               "height": 105,
-              "fill": "$surface",
+              "fill": "$background",
               "justifyContent": "space_between",
               "alignItems": "center",
               "children": [
@@ -434,7 +434,7 @@
                   "clip": true,
                   "width": 137,
                   "height": 87,
-                  "fill": "$surface",
+                  "fill": "$background",
                   "layout": "none",
                   "children": [
                     {
@@ -443,10 +443,10 @@
                       "x": 9,
                       "y": 7,
                       "name": "quiz_card",
-                      "fill": "$card-bg",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 80,
-                      "stroke": "$border",
+                      "stroke": "$background",
                       "strokeWidth": 1,
                       "strokeAlignment": "inner"
                     },
@@ -456,7 +456,7 @@
                       "x": 9,
                       "y": 52,
                       "name": "quiz_card_tiitle",
-                      "fill": "$card-footer",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 35
                     },
@@ -465,7 +465,7 @@
                       "id": "QlK60",
                       "x": 49,
                       "y": 52,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "titulo",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -476,7 +476,7 @@
                       "id": "H0Rt9",
                       "x": 49,
                       "y": 68,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "data",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -484,14 +484,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "OMKFF",
-                      "x": 112,
-                      "y": 0,
-                      "name": "delet_quiz_btn",
-                      "clip": true,
-                      "width": 25,
-                      "height": 25,
-                      "fill": "$surface",
+                    "id": "OMKFF",
+                    "x": 112,
+                    "y": 0,
+                    "name": "delet_quiz_btn",
+                    "clip": true,
+                    "width": 25,
+                    "height": 25,
+                    "fill": "$background",
                       "layout": "none",
                       "children": [
                         {
@@ -499,7 +499,7 @@
                           "id": "P8Ekv",
                           "x": 0,
                           "y": 2,
-                          "fill": "#000000ff",
+                          "fill": "$surface",
                           "width": 23,
                           "height": 22
                         },
@@ -508,7 +508,7 @@
                           "id": "j3nS3",
                           "x": 6,
                           "y": 2,
-                          "fill": "$text-on-footer",
+                          "fill": "$text_secondary",
                           "textGrowth": "fixed-width-height",
                           "width": 6,
                           "height": "fill_container(16)",
@@ -521,14 +521,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "cX4aE",
-                      "x": 5,
-                      "y": 0,
-                      "name": "edit_quiz_btn",
-                      "clip": true,
-                      "width": 25,
-                      "height": 25,
-                      "fill": "$surface",
+                    "id": "cX4aE",
+                    "x": 5,
+                    "y": 0,
+                    "name": "edit_quiz_btn",
+                    "clip": true,
+                    "width": 25,
+                    "height": 25,
+                    "fill": "$background",
                       "layout": "none",
                       "children": [
                         {
@@ -536,7 +536,7 @@
                           "id": "n88gQz",
                           "x": 0,
                           "y": 2,
-                          "fill": "#000000ff",
+                          "fill": "$surface",
                           "width": 23,
                           "height": 22
                         },
@@ -549,7 +549,7 @@
                           "height": 17,
                           "icon": "pencil",
                           "library": "lucide",
-                          "fill": "$text-on-footer"
+                          "fill": "$text_secondary"
                         }
                       ]
                     }
@@ -563,7 +563,7 @@
                   "clip": true,
                   "width": 137,
                   "height": 87,
-                  "fill": "$surface",
+                  "fill": "$background",
                   "layout": "none",
                   "children": [
                     {
@@ -572,10 +572,10 @@
                       "x": 9,
                       "y": 7,
                       "name": "quiz_card",
-                      "fill": "$card-bg",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 80,
-                      "stroke": "$border",
+                      "stroke": "$background",
                       "strokeWidth": 1,
                       "strokeAlignment": "inner"
                     },
@@ -585,7 +585,7 @@
                       "x": 9,
                       "y": 52,
                       "name": "quiz_card_tiitle",
-                      "fill": "$card-footer",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 35
                     },
@@ -594,7 +594,7 @@
                       "id": "tLdZr",
                       "x": 49,
                       "y": 52,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "titulo",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -605,7 +605,7 @@
                       "id": "vGkJS",
                       "x": 49,
                       "y": 68,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "data",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -613,14 +613,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "TE4wM",
-                      "x": 112,
-                      "y": 0,
-                      "name": "delet_quiz_btn",
-                      "clip": true,
-                      "width": 25,
-                      "height": 25,
-                      "fill": "$surface",
+                    "id": "TE4wM",
+                    "x": 112,
+                    "y": 0,
+                    "name": "delet_quiz_btn",
+                    "clip": true,
+                    "width": 25,
+                    "height": 25,
+                    "fill": "$background",
                       "layout": "none",
                       "children": [
                         {
@@ -628,7 +628,7 @@
                           "id": "FtIr5",
                           "x": 0,
                           "y": 2,
-                          "fill": "#000000ff",
+                          "fill": "$surface",
                           "width": 23,
                           "height": 22
                         },
@@ -637,7 +637,7 @@
                           "id": "mO7AZ",
                           "x": 6,
                           "y": 2,
-                          "fill": "$text-on-footer",
+                          "fill": "$text_secondary",
                           "textGrowth": "fixed-width-height",
                           "width": 6,
                           "height": "fill_container(16)",
@@ -650,14 +650,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "NMa2i",
-                      "x": 5,
-                      "y": 0,
-                      "name": "edit_quiz_btn",
-                      "clip": true,
-                      "width": 25,
-                      "height": 25,
-                      "fill": "$surface",
+                    "id": "NMa2i",
+                    "x": 5,
+                    "y": 0,
+                    "name": "edit_quiz_btn",
+                    "clip": true,
+                    "width": 25,
+                    "height": 25,
+                    "fill": "$background",
                       "layout": "none",
                       "children": [
                         {
@@ -665,7 +665,7 @@
                           "id": "U4e9O",
                           "x": 0,
                           "y": 2,
-                          "fill": "#000000ff",
+                          "fill": "$surface",
                           "width": 23,
                           "height": 22
                         },
@@ -678,7 +678,7 @@
                           "height": 17,
                           "icon": "pencil",
                           "library": "lucide",
-                          "fill": "$text-on-footer"
+                          "fill": "$text_secondary"
                         }
                       ]
                     }
@@ -692,7 +692,7 @@
                   "clip": true,
                   "width": 137,
                   "height": 87,
-                  "fill": "$surface",
+                  "fill": "$background",
                   "layout": "none",
                   "children": [
                     {
@@ -701,10 +701,10 @@
                       "x": 9,
                       "y": 7,
                       "name": "quiz_card",
-                      "fill": "$card-bg",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 80,
-                      "stroke": "$border",
+                      "stroke": "$background",
                       "strokeWidth": 1,
                       "strokeAlignment": "inner"
                     },
@@ -714,7 +714,7 @@
                       "x": 9,
                       "y": 52,
                       "name": "quiz_card_tiitle",
-                      "fill": "$card-footer",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 35
                     },
@@ -723,7 +723,7 @@
                       "id": "guabu",
                       "x": 49,
                       "y": 52,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "titulo",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -734,7 +734,7 @@
                       "id": "L7quRG",
                       "x": 49,
                       "y": 68,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "data",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -742,14 +742,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "u40bMK",
-                      "x": 112,
-                      "y": 0,
-                      "name": "delet_quiz_btn",
-                      "clip": true,
-                      "width": 25,
-                      "height": 25,
-                      "fill": "$surface",
+                    "id": "u40bMK",
+                    "x": 112,
+                    "y": 0,
+                    "name": "delet_quiz_btn",
+                    "clip": true,
+                    "width": 25,
+                    "height": 25,
+                    "fill": "$background",
                       "layout": "none",
                       "children": [
                         {
@@ -757,7 +757,7 @@
                           "id": "Q6Ze1t",
                           "x": 0,
                           "y": 2,
-                          "fill": "#000000ff",
+                          "fill": "$surface",
                           "width": 23,
                           "height": 22
                         },
@@ -766,7 +766,7 @@
                           "id": "GE69L",
                           "x": 6,
                           "y": 2,
-                          "fill": "$text-on-footer",
+                          "fill": "$text_secondary",
                           "textGrowth": "fixed-width-height",
                           "width": 6,
                           "height": "fill_container(16)",
@@ -779,14 +779,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "L2wQt8",
-                      "x": 5,
-                      "y": 0,
-                      "name": "edit_quiz_btn",
-                      "clip": true,
-                      "width": 25,
-                      "height": 25,
-                      "fill": "$surface",
+                    "id": "L2wQt8",
+                    "x": 5,
+                    "y": 0,
+                    "name": "edit_quiz_btn",
+                    "clip": true,
+                    "width": 25,
+                    "height": 25,
+                    "fill": "$background",
                       "layout": "none",
                       "children": [
                         {
@@ -794,7 +794,7 @@
                           "id": "fZ2Rr",
                           "x": 0,
                           "y": 2,
-                          "fill": "#000000ff",
+                          "fill": "$surface",
                           "width": 23,
                           "height": 22
                         },
@@ -807,7 +807,7 @@
                           "height": 17,
                           "icon": "pencil",
                           "library": "lucide",
-                          "fill": "$text-on-footer"
+                          "fill": "$text_secondary"
                         }
                       ]
                     }
@@ -821,7 +821,7 @@
                   "clip": true,
                   "width": 137,
                   "height": 87,
-                  "fill": "$surface",
+                  "fill": "$background",
                   "layout": "none",
                   "children": [
                     {
@@ -830,10 +830,10 @@
                       "x": 9,
                       "y": 7,
                       "name": "quiz_card",
-                      "fill": "$card-bg",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 80,
-                      "stroke": "$border",
+                      "stroke": "$background",
                       "strokeWidth": 1,
                       "strokeAlignment": "inner"
                     },
@@ -843,7 +843,7 @@
                       "x": 9,
                       "y": 52,
                       "name": "quiz_card_tiitle",
-                      "fill": "$card-footer",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 35
                     },
@@ -852,7 +852,7 @@
                       "id": "XXiCI",
                       "x": 49,
                       "y": 52,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "titulo",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -863,7 +863,7 @@
                       "id": "z9O5UY",
                       "x": 49,
                       "y": 68,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "data",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -871,14 +871,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "xJg9i",
-                      "x": 112,
-                      "y": 0,
-                      "name": "delet_quiz_btn",
-                      "clip": true,
-                      "width": 25,
-                      "height": 25,
-                      "fill": "$surface",
+                    "id": "xJg9i",
+                    "x": 112,
+                    "y": 0,
+                    "name": "delet_quiz_btn",
+                    "clip": true,
+                    "width": 25,
+                    "height": 25,
+                    "fill": "$background",
                       "layout": "none",
                       "children": [
                         {
@@ -886,7 +886,7 @@
                           "id": "JQ17q",
                           "x": 0,
                           "y": 2,
-                          "fill": "#000000ff",
+                          "fill": "$surface",
                           "width": 23,
                           "height": 22
                         },
@@ -895,7 +895,7 @@
                           "id": "lBqMm",
                           "x": 6,
                           "y": 2,
-                          "fill": "$text-on-footer",
+                          "fill": "$text_secondary",
                           "textGrowth": "fixed-width-height",
                           "width": 6,
                           "height": "fill_container(16)",
@@ -908,14 +908,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "t6ALNy",
-                      "x": 5,
-                      "y": 0,
-                      "name": "edit_quiz_btn",
-                      "clip": true,
-                      "width": 25,
-                      "height": 25,
-                      "fill": "$surface",
+                    "id": "t6ALNy",
+                    "x": 5,
+                    "y": 0,
+                    "name": "edit_quiz_btn",
+                    "clip": true,
+                    "width": 25,
+                    "height": 25,
+                    "fill": "$background",
                       "layout": "none",
                       "children": [
                         {
@@ -923,7 +923,7 @@
                           "id": "oOTNz",
                           "x": 0,
                           "y": 2,
-                          "fill": "#000000ff",
+                          "fill": "$surface",
                           "width": 23,
                           "height": 22
                         },
@@ -936,7 +936,7 @@
                           "height": 17,
                           "icon": "pencil",
                           "library": "lucide",
-                          "fill": "$text-on-footer"
+                          "fill": "$text_secondary"
                         }
                       ]
                     }
@@ -950,7 +950,7 @@
                   "clip": true,
                   "width": 137,
                   "height": 87,
-                  "fill": "$surface",
+                  "fill": "$background",
                   "layout": "none",
                   "children": [
                     {
@@ -959,10 +959,10 @@
                       "x": 9,
                       "y": 7,
                       "name": "quiz_card",
-                      "fill": "$card-bg",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 80,
-                      "stroke": "$border",
+                      "stroke": "$background",
                       "strokeWidth": 1,
                       "strokeAlignment": "inner"
                     },
@@ -972,7 +972,7 @@
                       "x": 9,
                       "y": 52,
                       "name": "quiz_card_tiitle",
-                      "fill": "$card-footer",
+                      "fill": "$surface",
                       "width": 118,
                       "height": 35
                     },
@@ -981,7 +981,7 @@
                       "id": "qc3HY",
                       "x": 49,
                       "y": 52,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "titulo",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -992,7 +992,7 @@
                       "id": "Hg7VF",
                       "x": 49,
                       "y": 68,
-                      "fill": "$text-on-footer",
+                      "fill": "$text_secondary",
                       "content": "data",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -1000,14 +1000,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "S9jaY",
-                      "x": 112,
-                      "y": 0,
-                      "name": "delet_quiz_btn",
-                      "clip": true,
-                      "width": 25,
-                      "height": 25,
-                      "fill": "$surface",
+                    "id": "S9jaY",
+                    "x": 112,
+                    "y": 0,
+                    "name": "delet_quiz_btn",
+                    "clip": true,
+                    "width": 25,
+                    "height": 25,
+                    "fill": "$background",
                       "layout": "none",
                       "children": [
                         {
@@ -1015,7 +1015,7 @@
                           "id": "ErANT",
                           "x": 0,
                           "y": 2,
-                          "fill": "#000000ff",
+                          "fill": "$surface",
                           "width": 23,
                           "height": 22
                         },
@@ -1024,7 +1024,7 @@
                           "id": "er28h",
                           "x": 6,
                           "y": 2,
-                          "fill": "$text-on-footer",
+                          "fill": "$text_secondary",
                           "textGrowth": "fixed-width-height",
                           "width": 6,
                           "height": "fill_container(16)",
@@ -1037,14 +1037,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "j8jSG",
-                      "x": 5,
-                      "y": 0,
-                      "name": "edit_quiz_btn",
-                      "clip": true,
-                      "width": 25,
-                      "height": 25,
-                      "fill": "$surface",
+                    "id": "j8jSG",
+                    "x": 5,
+                    "y": 0,
+                    "name": "edit_quiz_btn",
+                    "clip": true,
+                    "width": 25,
+                    "height": 25,
+                    "fill": "$background",
                       "layout": "none",
                       "children": [
                         {
@@ -1052,7 +1052,7 @@
                           "id": "W0ykKB",
                           "x": 0,
                           "y": 2,
-                          "fill": "#000000ff",
+                          "fill": "$surface",
                           "width": 23,
                           "height": 22
                         },
@@ -1065,7 +1065,7 @@
                           "height": 17,
                           "icon": "pencil",
                           "library": "lucide",
-                          "fill": "$text-on-footer"
+                          "fill": "$text_secondary"
                         }
                       ]
                     }
@@ -1084,7 +1084,7 @@
           "clip": true,
           "width": 148,
           "height": 70,
-          "fill": "$surface",
+          "fill": "$background",
           "layout": "none",
           "children": [
             {
@@ -1092,7 +1092,7 @@
               "id": "j5aZFb",
               "x": 11,
               "y": 16,
-              "fill": "$action-bg",
+              "fill": "$surface",
               "width": 123,
               "height": 35
             },
@@ -1101,7 +1101,7 @@
               "id": "LBwMG",
               "x": 37,
               "y": 24,
-              "fill": "$action-text",
+              "fill": "$text_secondary",
               "content": "novo quiz",
               "fontFamily": "Inter",
               "fontSize": 16,
@@ -1116,7 +1116,7 @@
           "clip": true,
           "width": "fill_container",
           "height": 136,
-          "fill": "$surface",
+          "fill": "$background",
           "layout": "none"
         }
       ]
@@ -1129,12 +1129,12 @@
       "name": "quiz_detail",
       "context": "pagina que aparece quando clica na thumbnail",
       "theme": {
-        "light theme": "Variant"
+        "default": "dark"
       },
       "clip": true,
       "width": 464,
       "height": 469,
-      "fill": "$bg",
+      "fill": "$background",
       "layout": "none",
       "children": [
         {
@@ -1144,7 +1144,7 @@
           "y": 48,
           "name": "titulo",
           "reusable": true,
-          "fill": "$text-primary",
+          "fill": "$text_primary",
           "content": "Titulo",
           "fontFamily": "Inter",
           "fontSize": 16,
@@ -1157,7 +1157,7 @@
           "y": 103,
           "name": "question",
           "reusable": true,
-          "fill": "$text-primary",
+          "fill": "$text_primary",
           "textGrowth": "fixed-width",
           "width": "fill_container(103)",
           "content": "texto do quiz ",
@@ -1174,7 +1174,7 @@
           "clip": true,
           "width": "fill_container(464)",
           "height": 133,
-          "fill": "$surface",
+          "fill": "$background",
           "layout": "vertical",
           "padding": [
             0,
@@ -1185,7 +1185,7 @@
             {
               "type": "text",
               "id": "NIXSk",
-              "fill": "$text-primary",
+              "fill": "$text_primary",
               "content": "pergunta 1 ",
               "fontFamily": "Inter",
               "fontSize": 16,
@@ -1194,7 +1194,7 @@
             {
               "type": "text",
               "id": "vL4RS",
-              "fill": "$text-primary",
+              "fill": "$text_primary",
               "content": "pergunta 1 ",
               "fontFamily": "Inter",
               "fontSize": 16,
@@ -1203,7 +1203,7 @@
             {
               "type": "text",
               "id": "sNosY",
-              "fill": "$text-primary",
+              "fill": "$text_primary",
               "content": "pergunta 1 ",
               "fontFamily": "Inter",
               "fontSize": 16,
@@ -1221,25 +1221,27 @@
       "name": "new_quiz_form",
       "context": "pagina que aparece quando clica no botao de novo quiz \né como o componente de detalhes mas seus campos sao inputs",
       "theme": {
-        "light theme": "Variant"
+        "default": "dark"
       },
       "clip": true,
       "width": 464,
       "height": 469,
-      "fill": "$bg",
+      "fill": "$background",
       "layout": "none",
       "children": [
         {
           "id": "K1K4T",
           "type": "ref",
           "ref": "ta243",
-          "content": "Titulo(input)"
+          "content": "Titulo(input)",
+          "fill": "$text_primary"
         },
         {
           "id": "pLfO3",
           "type": "ref",
           "ref": "UGSGs",
-          "content": "texto do quiz (input)"
+          "content": "texto do quiz (input)",
+          "fill": "$text_primary"
         },
         {
           "type": "frame",
@@ -1250,7 +1252,7 @@
           "clip": true,
           "width": "fill_container(464)",
           "height": 133,
-          "fill": "$surface",
+          "fill": "$background",
           "layout": "vertical",
           "padding": [
             0,
@@ -1261,7 +1263,7 @@
             {
               "type": "text",
               "id": "Vsb20",
-              "fill": "$text-primary",
+              "fill": "$text_primary",
               "content": "pergunta 1 ",
               "fontFamily": "Inter",
               "fontSize": 16,
@@ -1270,7 +1272,7 @@
             {
               "type": "text",
               "id": "rjCz4",
-              "fill": "$text-primary",
+              "fill": "$text_primary",
               "content": "pergunta 1 ",
               "fontFamily": "Inter",
               "fontSize": 16,
@@ -1279,7 +1281,7 @@
             {
               "type": "text",
               "id": "jE7KL",
-              "fill": "$text-primary",
+              "fill": "$text_primary",
               "content": "pergunta 1 ",
               "fontFamily": "Inter",
               "fontSize": 16,
@@ -1291,11 +1293,9 @@
     }
   ],
   "themes": {
-    "light theme": [
-      "Variant"
-    ],
-    "dark theme": [
-      "Default"
+    "default": [
+      "light",
+      "dark"
     ]
   },
   "variables": {
@@ -1305,62 +1305,64 @@
         {
           "value": "#ffffff",
           "theme": {
-            "light theme": "Variant"
+            "default": "light"
+          }
+        },
+        {
+          "value": "#000000",
+          "theme": {
+            "default": "dark"
           }
         }
       ]
     },
-    "text_black": {
+    "text_primary": {
       "type": "color",
       "value": [
         {
           "value": "#000000",
           "theme": {
-            "light theme": "Variant"
+            "default": "light"
+          }
+        },
+        {
+          "value": "#ffffff",
+          "theme": {
+            "default": "dark"
           }
         }
       ]
     },
-    "text_white": {
+    "text_secondary": {
       "type": "color",
       "value": [
         {
           "value": "#ffffff",
           "theme": {
-            "light theme": "Variant"
+            "default": "light"
+          }
+        },
+        {
+          "value": "#000000",
+          "theme": {
+            "default": "dark"
           }
         }
       ]
     },
-    "color": {
+    "surface": {
       "type": "color",
       "value": [
         {
           "value": "#000000",
           "theme": {
-            "dark theme": "Default"
+            "default": "light"
           }
-        }
-      ]
-    },
-    "black_text": {
-      "type": "color",
-      "value": [
-        {
-          "value": "#000000",
-          "theme": {
-            "dark theme": "Default"
-          }
-        }
-      ]
-    },
-    "white_text": {
-      "type": "color",
-      "value": [
+        },
         {
           "value": "#ffffff",
           "theme": {
-            "dark theme": "Default"
+            "default": "dark"
           }
         }
       ]
