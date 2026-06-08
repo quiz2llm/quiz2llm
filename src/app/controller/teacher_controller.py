@@ -19,6 +19,7 @@ def get_teacher_by_id(
         return service.get_by_id(id,session)
     except ValueError:
         raise HTTPException("teacher not found")
+        
 @router.get('',response_model=list[teacher_response],status_code=200)
 def get_all_teachers(session:Session = Depends(get_session)):
     return service.get_all(Session)
