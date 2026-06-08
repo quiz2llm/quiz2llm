@@ -100,4 +100,4 @@ O frontend roda em `http://localhost:5173`. Requisições para `/quiz` são prox
 
 ## ML Study (em planejamento)
 
-O objetivo final é utilizar os questionários cadastrados para avaliar a capacidade de diferentes LLMs em compreender contexto, e utilizar esse contexto para classificar questionários respondidos .
+O objetivo final é utilizar os questionários cadastrados para avaliar a capacidade de diferentes LLM em compreender contexto, e utilizar esse contexto para classificar questionários respondidos .

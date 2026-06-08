@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import String, ForeignKey
 from .User import User
+from .Role import user_role
 import uuid
 
 
@@ -16,5 +17,5 @@ class Student(User):
     )
 
     __mapper_args__ = {
-        "polymorphic_identity": "STUDENT",
+        "polymorphic_identity": user_role.STUDENT,
     }
