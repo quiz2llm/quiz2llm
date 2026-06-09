@@ -11,10 +11,10 @@
         "default": "dark"
       },
       "clip": true,
-      "width": "fill_container(700)",
-      "height": "fill_container(600)",
+      "height": 766,
       "fill": "$background",
       "layout": "vertical",
+      "justifyContent": "space_between",
       "alignItems": "center",
       "children": [
         {
@@ -57,15 +57,14 @@
           "id": "n2z2s2",
           "name": "main",
           "clip": true,
-          "width": "fill_container",
-          "height": "fill_container",
+          "width": "fit_content(716)",
           "fill": "$background",
           "layout": "vertical",
+          "gap": 10,
           "padding": [
             0,
             10
           ],
-          "justifyContent": "space_around",
           "alignItems": "center",
           "children": [
             {
@@ -73,37 +72,44 @@
               "type": "ref",
               "ref": "SBR6j",
               "x": 10,
-              "y": 15.1
+              "y": 0
             },
             {
               "id": "a7iHo",
               "type": "ref",
               "ref": "SBR6j",
               "x": 10,
-              "y": 128.29999999999998
+              "y": 93
             },
             {
               "id": "ybmri",
               "type": "ref",
               "ref": "SBR6j",
               "x": 10,
-              "y": 241.49999999999997
+              "y": 186
             },
             {
               "id": "FKN2d",
               "type": "ref",
               "ref": "SBR6j",
               "x": 10,
-              "y": 354.7
+              "y": 279
             },
             {
               "id": "Y6e4cn",
               "type": "ref",
               "ref": "SBR6j",
               "x": 10,
-              "y": 467.9
+              "y": 372
             }
           ]
+        },
+        {
+          "id": "f4QGn9",
+          "type": "ref",
+          "ref": "F92o8",
+          "x": 10,
+          "y": 641
         }
       ]
     },
@@ -117,17 +123,16 @@
         "default": "dark"
       },
       "clip": true,
-      "width": "fill_container(700)",
-      "height": "fill_container(600)",
       "fill": "$background",
       "layout": "vertical",
+      "gap": 17,
       "alignItems": "center",
       "children": [
         {
           "id": "mRSzj",
           "type": "ref",
           "ref": "xgisV",
-          "x": 1.5,
+          "x": 0,
           "y": 0
         },
         {
@@ -139,47 +144,54 @@
           "width": "fill_container",
           "fill": "$background",
           "layout": "vertical",
+          "gap": 10,
           "padding": [
             0,
             10
           ],
-          "justifyContent": "space_around",
           "alignItems": "center",
           "children": [
+            {
+              "id": "PKU1z",
+              "type": "ref",
+              "ref": "R6ZZu",
+              "x": 19,
+              "y": 0
+            },
             {
               "id": "NMDN7",
               "type": "ref",
               "ref": "h89SPH",
               "x": 10,
-              "y": 0
+              "y": 51
             },
             {
               "id": "HS7ZT",
               "type": "ref",
               "ref": "h89SPH",
               "x": 10,
-              "y": 83
+              "y": 144
             },
             {
               "id": "V8tiUT",
               "type": "ref",
               "ref": "h89SPH",
               "x": 10,
-              "y": 166
+              "y": 237
             },
             {
               "id": "S1HaF",
               "type": "ref",
               "ref": "h89SPH",
               "x": 10,
-              "y": 249
+              "y": 330
             },
             {
               "id": "VGIl8",
               "type": "ref",
               "ref": "h89SPH",
               "x": 10,
-              "y": 332
+              "y": 423
             }
           ]
         },
@@ -191,25 +203,19 @@
           "reusable": true,
           "clip": true,
           "width": 148,
-          "height": 70,
-          "fill": "$background",
-          "layout": "none",
+          "height": 55,
+          "fill": "$text_secondary",
+          "stroke": "$text_primary",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
           "children": [
-            {
-              "type": "rectangle",
-              "id": "j5aZFb",
-              "x": 11,
-              "y": 16,
-              "fill": "$surface",
-              "width": 123,
-              "height": 35
-            },
             {
               "type": "text",
               "id": "LBwMG",
-              "x": 37,
-              "y": 24,
-              "fill": "$text_secondary",
+              "fill": "$text_primary",
               "content": "novo quiz",
               "fontFamily": "Inter",
               "fontSize": 16,
@@ -218,22 +224,763 @@
           ]
         },
         {
+          "id": "S6kr5",
+          "type": "ref",
+          "ref": "F92o8",
+          "x": 0.5,
+          "y": 646,
+          "theme": {
+            "default": "light"
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "mSFI3",
+      "x": 1498,
+      "y": 56,
+      "name": "home - adm view",
+      "theme": {
+        "default": "dark"
+      },
+      "clip": true,
+      "height": 771,
+      "fill": "$background",
+      "layout": "vertical",
+      "gap": 3,
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "id": "e8Wyo",
+          "type": "ref",
+          "ref": "xgisV",
+          "x": 0,
+          "y": 0,
+          "descendants": {
+            "Ti5GQ": {
+              "content": "Teachers"
+            }
+          }
+        },
+        {
           "type": "frame",
-          "id": "P13u2A",
-          "name": "footer",
+          "id": "n7RZL",
+          "name": "main",
           "clip": true,
           "width": "fill_container",
-          "height": 136,
+          "height": "fill_container",
           "fill": "$background",
-          "layout": "none"
+          "layout": "vertical",
+          "padding": [
+            0,
+            10
+          ],
+          "justifyContent": "space_around",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "ws7Jb",
+              "type": "ref",
+              "ref": "wOpKf",
+              "x": 10,
+              "y": 21.9
+            },
+            {
+              "id": "f9Si1",
+              "type": "ref",
+              "ref": "wOpKf",
+              "x": 10,
+              "y": 148.7
+            },
+            {
+              "id": "R5CbDY",
+              "type": "ref",
+              "ref": "wOpKf",
+              "x": 10,
+              "y": 275.5
+            },
+            {
+              "id": "p7FyU",
+              "type": "ref",
+              "ref": "wOpKf",
+              "x": 10,
+              "y": 402.3
+            },
+            {
+              "id": "iLQps",
+              "type": "ref",
+              "ref": "t1W47",
+              "x": 274.5,
+              "y": 529.1,
+              "descendants": {
+                "LBwMG": {
+                  "content": "novo professor"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "WnYAe",
+          "type": "ref",
+          "ref": "F92o8",
+          "x": 0.5,
+          "y": 646,
+          "theme": {
+            "default": "light"
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "NAKSU",
+      "x": 2235,
+      "y": 56,
+      "name": "home - adm view",
+      "theme": {
+        "default": "dark"
+      },
+      "clip": true,
+      "height": 771,
+      "fill": "$background",
+      "layout": "vertical",
+      "gap": 3,
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "id": "lTMyi",
+          "type": "ref",
+          "ref": "xgisV",
+          "x": 0,
+          "y": 0,
+          "descendants": {
+            "Ti5GQ": {
+              "content": "Anwsers"
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "AltdQ",
+          "name": "main",
+          "clip": true,
+          "width": "fill_container",
+          "fill": "$background",
+          "layout": "vertical",
+          "gap": 10,
+          "padding": [
+            0,
+            10
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "B1SlH",
+              "type": "ref",
+              "ref": "R6ZZu",
+              "x": 19,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tTGGq",
+          "name": "quiz_card_dinamic",
+          "clip": true,
+          "width": "fill_container",
+          "height": 83,
+          "fill": "$background",
+          "stroke": "$surface",
+          "strokeWidth": {
+            "top": 2
+          },
+          "strokeAlignment": "outer",
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "kl5Gx",
+              "x": 0,
+              "y": 0,
+              "name": "quiz_card_tittle",
+              "clip": true,
+              "width": "fill_container(668)",
+              "height": 55,
+              "fill": "$background",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kYc2S",
+                  "x": 18,
+                  "y": 31.75,
+                  "fill": "$text_primary",
+                  "textGrowth": "fixed-width",
+                  "width": 640,
+                  "content": "titulo do quiz ",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "ioCzu",
+                  "x": 18,
+                  "y": 6,
+                  "name": "dinamic_quiz_title",
+                  "clip": true,
+                  "width": 642,
+                  "height": 26,
+                  "fill": "$background",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "F3eA6",
+                      "type": "ref",
+                      "ref": "UgsOX",
+                      "width": 119,
+                      "height": 31,
+                      "flipX": false,
+                      "flipY": false,
+                      "x": 0,
+                      "y": -2.5,
+                      "layout": "horizontal",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "fill": "$background",
+                      "descendants": {
+                        "dpSg9": {
+                          "content": "Anwser",
+                          "width": "fill_container",
+                          "flipX": false,
+                          "flipY": false,
+                          "height": 16,
+                          "x": 0,
+                          "y": 7.5,
+                          "enabled": true,
+                          "name": "id_anwser"
+                        },
+                        "WR7Hf": {
+                          "enabled": true
+                        }
+                      }
+                    },
+                    {
+                      "type": "icon",
+                      "id": "M47b9a",
+                      "width": 44,
+                      "height": 24,
+                      "icon": "trash-2",
+                      "library": "lucide",
+                      "fill": "$text_primary"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "ygFq9",
+              "type": "ref",
+              "ref": "c2jrIV",
+              "descendants": {
+                "FxbkR": {
+                  "content": "nome do aluno "
+                },
+                "LLeSW": {
+                  "content": "data quando foi respondido",
+                  "fontSize": 12
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "axYmv",
+          "name": "quiz_card_dinamic",
+          "clip": true,
+          "width": "fill_container",
+          "height": 83,
+          "fill": "$background",
+          "stroke": "$surface",
+          "strokeWidth": {
+            "top": 2
+          },
+          "strokeAlignment": "outer",
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ZiqSt",
+              "x": 0,
+              "y": 0,
+              "name": "quiz_card_tittle",
+              "clip": true,
+              "width": "fill_container(668)",
+              "height": 55,
+              "fill": "$background",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "CmAtV",
+                  "x": 18,
+                  "y": 31.75,
+                  "fill": "$text_primary",
+                  "textGrowth": "fixed-width",
+                  "width": 640,
+                  "content": "titulo do quiz ",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "b6hjYJ",
+                  "x": 18,
+                  "y": 6,
+                  "name": "dinamic_quiz_title",
+                  "clip": true,
+                  "width": 642,
+                  "height": 26,
+                  "fill": "$background",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "oN0XY",
+                      "type": "ref",
+                      "ref": "UgsOX",
+                      "width": 119,
+                      "height": 31,
+                      "flipX": false,
+                      "flipY": false,
+                      "x": 0,
+                      "y": -2.5,
+                      "layout": "horizontal",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "fill": "$background",
+                      "descendants": {
+                        "dpSg9": {
+                          "content": "Anwser",
+                          "width": "fill_container",
+                          "flipX": false,
+                          "flipY": false,
+                          "height": 16,
+                          "x": 0,
+                          "y": 7.5,
+                          "enabled": true,
+                          "name": "id_anwser"
+                        },
+                        "WR7Hf": {
+                          "enabled": true
+                        }
+                      }
+                    },
+                    {
+                      "type": "icon",
+                      "id": "qhaYh",
+                      "width": 44,
+                      "height": 24,
+                      "icon": "trash-2",
+                      "library": "lucide",
+                      "fill": "$text_primary"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "FdslY",
+              "type": "ref",
+              "ref": "c2jrIV",
+              "descendants": {
+                "FxbkR": {
+                  "content": "nome do aluno "
+                },
+                "LLeSW": {
+                  "content": "data quando foi respondido",
+                  "fontSize": 12
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "BsmHf",
+          "name": "quiz_card_dinamic",
+          "clip": true,
+          "width": "fill_container",
+          "height": 83,
+          "fill": "$background",
+          "stroke": "$surface",
+          "strokeWidth": {
+            "top": 2
+          },
+          "strokeAlignment": "outer",
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Frd2k",
+              "x": 0,
+              "y": 0,
+              "name": "quiz_card_tittle",
+              "clip": true,
+              "width": "fill_container(668)",
+              "height": 55,
+              "fill": "$background",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "F8MhV",
+                  "x": 18,
+                  "y": 31.75,
+                  "fill": "$text_primary",
+                  "textGrowth": "fixed-width",
+                  "width": 640,
+                  "content": "titulo do quiz ",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "fZmrk",
+                  "x": 18,
+                  "y": 6,
+                  "name": "dinamic_quiz_title",
+                  "clip": true,
+                  "width": 642,
+                  "height": 26,
+                  "fill": "$background",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "B7AC6",
+                      "type": "ref",
+                      "ref": "UgsOX",
+                      "width": 119,
+                      "height": 31,
+                      "flipX": false,
+                      "flipY": false,
+                      "x": 0,
+                      "y": -2.5,
+                      "layout": "horizontal",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "fill": "$background",
+                      "descendants": {
+                        "dpSg9": {
+                          "content": "Anwser",
+                          "width": "fill_container",
+                          "flipX": false,
+                          "flipY": false,
+                          "height": 16,
+                          "x": 0,
+                          "y": 7.5,
+                          "enabled": true,
+                          "name": "id_anwser"
+                        },
+                        "WR7Hf": {
+                          "enabled": true
+                        }
+                      }
+                    },
+                    {
+                      "type": "icon",
+                      "id": "qo5BP",
+                      "width": 44,
+                      "height": 24,
+                      "icon": "trash-2",
+                      "library": "lucide",
+                      "fill": "$text_primary"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "rwmRE",
+              "type": "ref",
+              "ref": "c2jrIV",
+              "descendants": {
+                "FxbkR": {
+                  "content": "nome do aluno "
+                },
+                "LLeSW": {
+                  "content": "data quando foi respondido",
+                  "fontSize": 12
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "c5wEHA",
+          "name": "quiz_card_dinamic",
+          "clip": true,
+          "width": "fill_container",
+          "height": 83,
+          "fill": "$background",
+          "stroke": "$surface",
+          "strokeWidth": {
+            "top": 2
+          },
+          "strokeAlignment": "outer",
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "GqC6K",
+              "x": 0,
+              "y": 0,
+              "name": "quiz_card_tittle",
+              "clip": true,
+              "width": "fill_container(668)",
+              "height": 55,
+              "fill": "$background",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tj07d",
+                  "x": 18,
+                  "y": 31.75,
+                  "fill": "$text_primary",
+                  "textGrowth": "fixed-width",
+                  "width": 640,
+                  "content": "titulo do quiz ",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "WjQ0z",
+                  "x": 18,
+                  "y": 6,
+                  "name": "dinamic_quiz_title",
+                  "clip": true,
+                  "width": 642,
+                  "height": 26,
+                  "fill": "$background",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "Z4WFI",
+                      "type": "ref",
+                      "ref": "UgsOX",
+                      "width": 119,
+                      "height": 31,
+                      "flipX": false,
+                      "flipY": false,
+                      "x": 0,
+                      "y": -2.5,
+                      "layout": "horizontal",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "fill": "$background",
+                      "descendants": {
+                        "dpSg9": {
+                          "content": "Anwser",
+                          "width": "fill_container",
+                          "flipX": false,
+                          "flipY": false,
+                          "height": 16,
+                          "x": 0,
+                          "y": 7.5,
+                          "enabled": true,
+                          "name": "id_anwser"
+                        },
+                        "WR7Hf": {
+                          "enabled": true
+                        }
+                      }
+                    },
+                    {
+                      "type": "icon",
+                      "id": "lMKZp",
+                      "width": 44,
+                      "height": 24,
+                      "icon": "trash-2",
+                      "library": "lucide",
+                      "fill": "$text_primary"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "sjoKT",
+              "type": "ref",
+              "ref": "c2jrIV",
+              "descendants": {
+                "FxbkR": {
+                  "content": "nome do aluno "
+                },
+                "LLeSW": {
+                  "content": "data quando foi respondido",
+                  "fontSize": 12
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "RWpUZ",
+          "name": "quiz_card_dinamic",
+          "clip": true,
+          "width": "fill_container",
+          "height": 83,
+          "fill": "$background",
+          "stroke": "$surface",
+          "strokeWidth": {
+            "top": 2
+          },
+          "strokeAlignment": "outer",
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ttY2X",
+              "x": 0,
+              "y": 0,
+              "name": "quiz_card_tittle",
+              "clip": true,
+              "width": "fill_container(668)",
+              "height": 55,
+              "fill": "$background",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DZH78",
+                  "x": 18,
+                  "y": 31.75,
+                  "fill": "$text_primary",
+                  "textGrowth": "fixed-width",
+                  "width": 640,
+                  "content": "titulo do quiz ",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "Ei2av",
+                  "x": 18,
+                  "y": 6,
+                  "name": "dinamic_quiz_title",
+                  "clip": true,
+                  "width": 642,
+                  "height": 26,
+                  "fill": "$background",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "s2ZYT",
+                      "type": "ref",
+                      "ref": "UgsOX",
+                      "width": 119,
+                      "height": 31,
+                      "flipX": false,
+                      "flipY": false,
+                      "x": 0,
+                      "y": -2.5,
+                      "layout": "horizontal",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "fill": "$background",
+                      "descendants": {
+                        "dpSg9": {
+                          "content": "Anwser",
+                          "width": "fill_container",
+                          "flipX": false,
+                          "flipY": false,
+                          "height": 16,
+                          "x": 0,
+                          "y": 7.5,
+                          "enabled": true,
+                          "name": "id_anwser"
+                        },
+                        "WR7Hf": {
+                          "enabled": true
+                        }
+                      }
+                    },
+                    {
+                      "type": "icon",
+                      "id": "fiXnv",
+                      "width": 44,
+                      "height": 24,
+                      "icon": "trash-2",
+                      "library": "lucide",
+                      "fill": "$text_primary"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "UpotL",
+              "type": "ref",
+              "ref": "c2jrIV",
+              "descendants": {
+                "FxbkR": {
+                  "content": "nome do aluno "
+                },
+                "LLeSW": {
+                  "content": "data quando foi respondido",
+                  "fontSize": 12
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "yQg7C",
+          "type": "ref",
+          "ref": "t1W47",
+          "x": 274.5,
+          "y": 578.375,
+          "descendants": {
+            "LBwMG": {
+              "content": "novo professor"
+            }
+          }
+        },
+        {
+          "id": "r1RF9",
+          "type": "ref",
+          "ref": "F92o8",
+          "x": 0.5,
+          "y": 646,
+          "theme": {
+            "default": "light"
+          }
         }
       ]
     },
     {
       "type": "frame",
       "id": "C50pVv",
-      "x": 1533,
-      "y": 187,
+      "x": -1182,
+      "y": 656,
       "name": "quiz_detail",
       "context": "pagina que aparece quando clica na thumbnail",
       "theme": {
@@ -324,8 +1071,8 @@
     {
       "type": "frame",
       "id": "mnpa0",
-      "x": 546,
-      "y": 715,
+      "x": -661,
+      "y": 656,
       "name": "new_quiz_form",
       "context": "pagina que aparece quando clica no botao de novo quiz \né como o componente de detalhes mas seus campos sao inputs",
       "theme": {
@@ -611,7 +1358,8 @@
               "width": 640,
               "content": "pergunta principal do quiz deve mostrar apenas a primeira linhas...",
               "fontFamily": "Inter",
-              "fontSize": 16
+              "fontSize": 16,
+              "fontWeight": "normal"
             }
           ]
         },
@@ -664,8 +1412,8 @@
     {
       "type": "frame",
       "id": "h89SPH",
-      "x": 793,
-      "y": -185,
+      "x": 765,
+      "y": -183,
       "name": "quiz_card_dinamic",
       "reusable": true,
       "clip": true,
@@ -701,7 +1449,8 @@
               "width": 640,
               "content": "pergunta principal do quiz deve mostrar apenas a primeira linhas...",
               "fontFamily": "Inter",
-              "fontSize": 16
+              "fontSize": 16,
+              "fontWeight": "normal"
             },
             {
               "type": "frame",
@@ -766,8 +1515,8 @@
     {
       "type": "frame",
       "id": "UgsOX",
-      "x": 793,
-      "y": -237,
+      "x": 765,
+      "y": -235,
       "name": "editible_card_tittle",
       "reusable": true,
       "clip": true,
@@ -800,6 +1549,471 @@
           "icon": "pen",
           "library": "lucide",
           "fill": "$text_primary"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "R6ZZu",
+      "x": 765,
+      "y": -53,
+      "name": "adimin_menu",
+      "reusable": true,
+      "clip": true,
+      "width": 659,
+      "height": 41,
+      "fill": "$background",
+      "justifyContent": "space_around",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "icon",
+          "id": "ULmC3",
+          "width": "fill_container",
+          "height": "fill_container",
+          "icon": "user",
+          "library": "lucide",
+          "fill": "$text_primary"
+        },
+        {
+          "type": "icon",
+          "id": "JIcCK",
+          "width": "fill_container",
+          "height": "fill_container",
+          "icon": "notebook-text",
+          "library": "lucide",
+          "fill": "$text_primary"
+        },
+        {
+          "type": "icon",
+          "id": "mxSZx",
+          "width": "fill_container",
+          "height": "fill_container",
+          "icon": "check-check",
+          "library": "lucide",
+          "fill": "$text_primary"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "F92o8",
+      "x": 765,
+      "y": 1060,
+      "name": "footer",
+      "theme": {
+        "default": "light"
+      },
+      "reusable": true,
+      "clip": true,
+      "width": 696,
+      "height": 125,
+      "fill": "$footer",
+      "padding": 10,
+      "justifyContent": "space_between",
+      "children": [
+        {
+          "id": "tMb6D",
+          "type": "ref",
+          "ref": "K99II",
+          "x": 10,
+          "y": 10,
+          "fill": "$footer"
+        },
+        {
+          "id": "g44cD",
+          "type": "ref",
+          "ref": "WeQ1e",
+          "x": 272.5,
+          "y": 10
+        },
+        {
+          "id": "zF5Pt",
+          "type": "ref",
+          "ref": "ZgYYu",
+          "x": 535,
+          "y": 10,
+          "width": "fit_content",
+          "height": "fit_content",
+          "flipX": false,
+          "flipY": false,
+          "clip": false
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "K99II",
+      "x": 770,
+      "y": 1232,
+      "name": "incon_text",
+      "reusable": true,
+      "clip": true,
+      "width": 118,
+      "height": 25,
+      "fill": "$footer",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "FW3DE",
+          "x": 32.30310182533549,
+          "y": 1.3886784097060172,
+          "fill": "$text_secondary",
+          "textGrowth": "fixed-width-height",
+          "width": 84,
+          "height": 22,
+          "content": "Kani0dev",
+          "fontFamily": "Inter",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "icon",
+          "id": "s7Jxo",
+          "x": 0,
+          "y": 0,
+          "width": 24,
+          "height": 25,
+          "icon": "github",
+          "library": "lucide",
+          "fill": "$text_secondary"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ZgYYu",
+      "x": 993,
+      "y": 1209,
+      "name": "Frame 3",
+      "reusable": true,
+      "clip": true,
+      "width": 158,
+      "height": 134,
+      "fill": "$footer",
+      "layout": "vertical",
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "iOXYE",
+          "name": "incon_text",
+          "clip": true,
+          "width": 151,
+          "height": 25,
+          "fill": "$footer",
+          "stroke": "$text_secondary",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "strokeAlignment": "inner",
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "YwdwP",
+              "x": 32.30310182533549,
+              "y": 1.3886784097060172,
+              "fill": "$text_secondary",
+              "textGrowth": "fixed-width-height",
+              "width": 84,
+              "height": 22,
+              "content": "About",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "icon",
+              "id": "bErna",
+              "x": 0,
+              "y": 0,
+              "width": 24,
+              "height": 25,
+              "icon": "code-xml",
+              "library": "lucide",
+              "fill": "$text_secondary"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "cmyhK",
+          "fill": "#ffffff",
+          "textGrowth": "fixed-width-height",
+          "width": 127,
+          "height": "fill_container",
+          "content": "lorem ipson bral \nbla bla pa pum \npirulito pao doce",
+          "fontFamily": "Inter",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "WeQ1e",
+      "x": 770,
+      "y": 1295,
+      "name": "incon_text",
+      "reusable": true,
+      "clip": true,
+      "width": 118,
+      "height": 25,
+      "fill": "$footer",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "Kk4Dl",
+          "x": 32.30310182533549,
+          "y": 1.3886784097060172,
+          "fill": "$text_secondary",
+          "textGrowth": "fixed-width-height",
+          "width": 84,
+          "height": 22,
+          "content": "Kani0dev",
+          "fontFamily": "Inter",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "icon",
+          "id": "I99qK",
+          "x": 0,
+          "y": 0,
+          "width": 24,
+          "height": 25,
+          "icon": "linkedin-logo-bold",
+          "library": "phosphor",
+          "fill": "$text_secondary"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "wOpKf",
+      "x": 1498,
+      "y": -136,
+      "name": "quiz_card_dinamic",
+      "reusable": true,
+      "clip": true,
+      "width": "fill_container(697)",
+      "height": 83,
+      "fill": "$background",
+      "stroke": "$text_primary",
+      "strokeWidth": {
+        "top": 2,
+        "right": 1,
+        "bottom": 1,
+        "left": 1
+      },
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "icon",
+          "id": "EV2lO",
+          "width": 94,
+          "height": "fill_container",
+          "icon": "user",
+          "library": "lucide",
+          "fill": "$text_primary"
+        },
+        {
+          "type": "frame",
+          "id": "fFn58",
+          "name": "Frame 4",
+          "clip": true,
+          "width": "fill_container",
+          "height": 83,
+          "fill": "$background",
+          "stroke": "$text_primary",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "padding": [
+            0,
+            10
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "z1jZK",
+              "fill": "$text_primary",
+              "content": "NOME DO PROFESSOR",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "IjtOK",
+              "name": "quiz_card_metadata",
+              "clip": true,
+              "width": "fill_container",
+              "height": 36,
+              "fill": "$background",
+              "padding": [
+                0,
+                10
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "v2vRNs",
+                  "fill": "$card",
+                  "content": "data da criaçao",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "OJ5T7",
+                  "fill": "$card",
+                  "textGrowth": "fixed-width",
+                  "width": "fit_content(148)",
+                  "content": "id do profesor",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "eAIqi",
+                  "fill": "$card",
+                  "textGrowth": "fixed-width",
+                  "width": "fit_content(148)",
+                  "content": "n quizes criados",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "u0YgZV",
+      "x": 2247,
+      "y": -129,
+      "name": "quiz_card_dinamic",
+      "reusable": true,
+      "clip": true,
+      "width": "fill_container(697)",
+      "height": 83,
+      "fill": "$background",
+      "stroke": "$surface",
+      "strokeWidth": {
+        "top": 2
+      },
+      "strokeAlignment": "outer",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "MK8OL",
+          "x": 0,
+          "y": 0,
+          "name": "quiz_card_tittle",
+          "reusable": true,
+          "clip": true,
+          "width": "fill_container(668)",
+          "height": 55,
+          "fill": "$background",
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "OTsMR",
+              "x": 18,
+              "y": 31.75,
+              "fill": "$text_primary",
+              "textGrowth": "fixed-width",
+              "width": 640,
+              "content": "titulo do quiz ",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "o4HPIv",
+              "x": 18,
+              "y": 6,
+              "name": "dinamic_quiz_title",
+              "clip": true,
+              "width": 642,
+              "height": 26,
+              "fill": "$background",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "QtF0b",
+                  "type": "ref",
+                  "ref": "UgsOX",
+                  "width": 119,
+                  "height": 31,
+                  "flipX": false,
+                  "flipY": false,
+                  "x": 0,
+                  "y": -2.5,
+                  "layout": "horizontal",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "fill": "$background",
+                  "descendants": {
+                    "dpSg9": {
+                      "content": "Anwser_id",
+                      "width": "fill_container",
+                      "flipX": false,
+                      "flipY": false,
+                      "height": 16,
+                      "x": 0,
+                      "y": 7.5,
+                      "enabled": true,
+                      "name": "id_anwser"
+                    },
+                    "WR7Hf": {
+                      "enabled": true
+                    }
+                  }
+                },
+                {
+                  "type": "icon",
+                  "id": "T3ok8",
+                  "width": 44,
+                  "height": 24,
+                  "icon": "trash-2",
+                  "library": "lucide",
+                  "fill": "$text_primary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ADSQi",
+          "type": "ref",
+          "ref": "c2jrIV",
+          "descendants": {
+            "FxbkR": {
+              "content": "nome do aluno "
+            },
+            "LLeSW": {
+              "content": "data quando foi respondido",
+              "fontSize": 12
+            }
+          }
         }
       ]
     }
@@ -890,6 +2104,23 @@
         },
         {
           "value": "#424242",
+          "theme": {
+            "default": "dark"
+          }
+        }
+      ]
+    },
+    "footer": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#0e0e0e",
+          "theme": {
+            "default": "light"
+          }
+        },
+        {
+          "value": "#0e0e0e",
           "theme": {
             "default": "dark"
           }
