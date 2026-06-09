@@ -4,13 +4,14 @@ import { useTheme } from './hooks/useTheme'
 import { Home } from './components/Home'
 import { QuizDetail } from './pages/QuizDetail'
 import { NewQuizForm } from './pages/NewQuizForm'
+import { LoginScreen } from './pages/LoginScreen'
 import { fetchQuizzes, deleteQuiz, type QuizResponse } from './services/quizApi'
 
 export type { QuizResponse }
 export type Quiz = QuizResponse
 
 type Role = 'guest' | 'admin'
-type Page = 'home' | 'quiz-detail' | 'new-quiz'
+type Page = 'home' | 'quiz-detail' | 'new-quiz' | 'login'
 
 function App() {
   const { mode, toggleTheme, themeConfig } = useTheme()
@@ -71,6 +72,18 @@ function App() {
     )
   }
 
+  if (page === 'login') {
+    return (
+      <ConfigProvider theme={themeConfig}>
+        <Layout style={{ minHeight: '100vh' }}>
+          <Layout.Content style={{ maxWidth: 521, margin: '0 auto', width: '100%' }}>
+            <LoginScreen onLoginSuccess={() => { setRole('admin'); goHome() }} />
+          </Layout.Content>
+        </Layout>
+      </ConfigProvider>
+    )
+  }
+
   return (
     <ConfigProvider theme={themeConfig}>
       <Layout style={{ minHeight: '100vh' }}>
@@ -113,6 +126,7 @@ function App() {
               onQuizClick={(q) => { setSelectedQuiz(q); setPage('quiz-detail') }}
               onNewQuiz={role === 'admin' ? () => setPage('new-quiz') : undefined}
               onDelete={role === 'admin' ? handleDelete : undefined}
+              onLogin={() => setPage('login')}
             />
           )}
         </Layout.Content>

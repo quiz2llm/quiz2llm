@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Empty, Flex, Typography, Divider } from 'antd'
+import { Empty, Flex } from 'antd'
+import { Header } from './Header'
 import { QuizCard } from './QuizCard'
 import { QuizCardAdmin } from './QuizCardAdmin'
 import { AdminMenu, type AdminTab } from './AdminMenu'
@@ -13,9 +14,10 @@ interface HomeProps {
   onQuizClick: (quiz: Quiz) => void
   onNewQuiz?: () => void
   onDelete?: (id: string) => void
+  onLogin?: () => void
 }
 
-export function Home({ role, quizzes, onQuizClick, onNewQuiz, onDelete }: HomeProps) {
+export function Home({ role, quizzes, onQuizClick, onNewQuiz, onDelete, onLogin }: HomeProps) {
   const [adminTab, setAdminTab] = useState<AdminTab>('quizzes')
 
   const formatDate = (dateStr: string) => {
@@ -25,12 +27,7 @@ export function Home({ role, quizzes, onQuizClick, onNewQuiz, onDelete }: HomePr
 
   return (
     <Flex vertical style={{ minHeight: '100%' }} gap={0}>
-      <div style={{ padding: '8px 16px', background: 'transparent' }}>
-        <Typography.Title level={4} style={{ margin: 0, textAlign: 'center' }}>
-          {role === 'admin' ? 'quizes' : 'quizes'}
-        </Typography.Title>
-        <Divider style={{ margin: '8px 0 0' }} />
-      </div>
+      <Header role={role} onLogin={onLogin} />
 
       {role === 'admin' && (
         <AdminMenu active={adminTab} onChange={setAdminTab} />
