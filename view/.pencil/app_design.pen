@@ -41,18 +41,6 @@
               "fontWeight": "normal"
             },
             {
-              "type": "text",
-              "id": "rYlHH",
-              "x": 15,
-              "y": 7,
-              "name": "user_role",
-              "fill": "$text_primary",
-              "content": "ROLE",
-              "fontFamily": "Inter",
-              "fontSize": 16,
-              "fontWeight": "normal"
-            },
-            {
               "type": "rectangle",
               "id": "NXBZJ",
               "x": 15,
@@ -66,319 +54,56 @@
         },
         {
           "type": "frame",
-          "id": "M4LMza",
+          "id": "n2z2s2",
           "name": "main",
           "clip": true,
           "width": "fill_container",
           "height": "fill_container",
           "fill": "$background",
           "layout": "vertical",
+          "padding": [
+            0,
+            10
+          ],
+          "justifyContent": "space_around",
           "alignItems": "center",
           "children": [
             {
-              "type": "frame",
-              "id": "JzPny",
-              "name": "thumbs_container",
-              "clip": true,
-              "width": 682,
-              "height": 105,
-              "fill": "$background",
-              "justifyContent": "space_between",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "DSjVo",
-                  "name": "quiz_thumb",
-                  "clip": true,
-                  "width": 128,
-                  "height": 87,
-                  "fill": "$background",
-                  "layout": "none",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "OJYUX",
-                      "x": 9,
-                      "y": 7,
-                      "name": "quiz_card",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 80,
-                      "stroke": "$background",
-                      "strokeWidth": 1,
-                      "strokeAlignment": "inner"
-                    },
-                    {
-                      "type": "rectangle",
-                      "id": "tV9kF",
-                      "x": 9,
-                      "y": 52,
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 35
-                    },
-                    {
-                      "type": "text",
-                      "id": "L6nDa",
-                      "x": 49,
-                      "y": 52,
-                      "fill": "$text_secondary",
-                      "content": "titulo",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "wYMUL",
-                      "x": 49,
-                      "y": 68,
-                      "fill": "$text_secondary",
-                      "content": "data",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "vDW9y",
-                  "name": "quiz_thumb",
-                  "clip": true,
-                  "width": 129,
-                  "height": 87,
-                  "fill": "$background",
-                  "layout": "none",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "FLdfd",
-                      "x": 9,
-                      "y": 7,
-                      "name": "quiz_card",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 80,
-                      "stroke": "$background",
-                      "strokeWidth": 1,
-                      "strokeAlignment": "inner"
-                    },
-                    {
-                      "type": "rectangle",
-                      "id": "jFvRn",
-                      "x": 9,
-                      "y": 52,
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 35
-                    },
-                    {
-                      "type": "text",
-                      "id": "j8IT6J",
-                      "x": 49,
-                      "y": 52,
-                      "fill": "$text_secondary",
-                      "content": "titulo",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "H1bb6",
-                      "x": 49,
-                      "y": 68,
-                      "fill": "$text_secondary",
-                      "content": "data",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "Cm6eD",
-                  "name": "quiz_thumb",
-                  "clip": true,
-                  "width": 129,
-                  "height": 87,
-                  "fill": "$background",
-                  "layout": "none",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "ITia5",
-                      "x": 9,
-                      "y": 7,
-                      "name": "quiz_card",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 80,
-                      "stroke": "$background",
-                      "strokeWidth": 1,
-                      "strokeAlignment": "inner"
-                    },
-                    {
-                      "type": "rectangle",
-                      "id": "xbBcy",
-                      "x": 9,
-                      "y": 52,
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 35
-                    },
-                    {
-                      "type": "text",
-                      "id": "bYQjH",
-                      "x": 49,
-                      "y": 52,
-                      "fill": "$text_secondary",
-                      "content": "titulo",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "aD340",
-                      "x": 49,
-                      "y": 68,
-                      "fill": "$text_secondary",
-                      "content": "data",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "VtDYG",
-                  "name": "quiz_thumb",
-                  "clip": true,
-                  "width": 129,
-                  "height": 87,
-                  "fill": "$background",
-                  "layout": "none",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "YxHeX",
-                      "x": 9,
-                      "y": 7,
-                      "name": "quiz_card",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 80,
-                      "stroke": "$background",
-                      "strokeWidth": 1,
-                      "strokeAlignment": "inner"
-                    },
-                    {
-                      "type": "rectangle",
-                      "id": "HCFny",
-                      "x": 9,
-                      "y": 52,
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 35
-                    },
-                    {
-                      "type": "text",
-                      "id": "gKmtd",
-                      "x": 49,
-                      "y": 52,
-                      "fill": "$text_secondary",
-                      "content": "titulo",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "FqCCJ",
-                      "x": 49,
-                      "y": 68,
-                      "fill": "$text_secondary",
-                      "content": "data",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "R32al0",
-                  "name": "quiz_thumb",
-                  "clip": true,
-                  "width": 129,
-                  "height": 87,
-                  "fill": "$background",
-                  "layout": "none",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "mSWwt",
-                      "x": 9,
-                      "y": 7,
-                      "name": "quiz_card",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 80,
-                      "stroke": "$background",
-                      "strokeWidth": 1,
-                      "strokeAlignment": "inner"
-                    },
-                    {
-                      "type": "rectangle",
-                      "id": "p5qj5",
-                      "x": 9,
-                      "y": 52,
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 35
-                    },
-                    {
-                      "type": "text",
-                      "id": "hgTJT",
-                      "x": 49,
-                      "y": 52,
-                      "fill": "$text_secondary",
-                      "content": "titulo",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "lgZ4H",
-                      "x": 49,
-                      "y": 68,
-                      "fill": "$text_secondary",
-                      "content": "data",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
+              "id": "WLIqm",
+              "type": "ref",
+              "ref": "SBR6j",
+              "x": 10,
+              "y": 15.1
+            },
+            {
+              "id": "a7iHo",
+              "type": "ref",
+              "ref": "SBR6j",
+              "x": 10,
+              "y": 128.29999999999998
+            },
+            {
+              "id": "ybmri",
+              "type": "ref",
+              "ref": "SBR6j",
+              "x": 10,
+              "y": 241.49999999999997
+            },
+            {
+              "id": "FKN2d",
+              "type": "ref",
+              "ref": "SBR6j",
+              "x": 10,
+              "y": 354.7
+            },
+            {
+              "id": "Y6e4cn",
+              "type": "ref",
+              "ref": "SBR6j",
+              "x": 10,
+              "y": 467.9
             }
           ]
-        },
-        {
-          "type": "frame",
-          "id": "Iw9uV",
-          "name": "footer",
-          "clip": true,
-          "width": "fill_container",
-          "height": 136,
-          "fill": "$background",
-          "layout": "none"
         }
       ]
     },
@@ -401,677 +126,60 @@
         {
           "id": "mRSzj",
           "type": "ref",
-          "ref": "xgisV"
+          "ref": "xgisV",
+          "x": 1.5,
+          "y": 0
         },
         {
           "type": "frame",
-          "id": "VroKH",
+          "id": "gcyKF",
           "name": "main",
           "reusable": true,
           "clip": true,
           "width": "fill_container",
-          "height": "fill_container",
           "fill": "$background",
           "layout": "vertical",
+          "padding": [
+            0,
+            10
+          ],
+          "justifyContent": "space_around",
           "alignItems": "center",
           "children": [
             {
-              "type": "frame",
-              "id": "UCBUO",
-              "name": "thumbs_container",
-              "clip": true,
-              "width": 682,
-              "height": 105,
-              "fill": "$background",
-              "justifyContent": "space_between",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "CqKce",
-                  "name": "quiz_thumb",
-                  "context": "os botoes de edicao e exclusao devem aparecer apenas quando o mouser estiver em cima do componente :Node ID: C50pVv\nao clicar o componente vai redirecionar para a pagina de detalhes da lead",
-                  "clip": true,
-                  "width": 137,
-                  "height": 87,
-                  "fill": "$background",
-                  "layout": "none",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "kvqRC",
-                      "x": 9,
-                      "y": 7,
-                      "name": "quiz_card",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 80,
-                      "stroke": "$background",
-                      "strokeWidth": 1,
-                      "strokeAlignment": "inner"
-                    },
-                    {
-                      "type": "rectangle",
-                      "id": "H2Apw",
-                      "x": 9,
-                      "y": 52,
-                      "name": "quiz_card_tiitle",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 35
-                    },
-                    {
-                      "type": "text",
-                      "id": "QlK60",
-                      "x": 49,
-                      "y": 52,
-                      "fill": "$text_secondary",
-                      "content": "titulo",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "H0Rt9",
-                      "x": 49,
-                      "y": 68,
-                      "fill": "$text_secondary",
-                      "content": "data",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "frame",
-                    "id": "OMKFF",
-                    "x": 112,
-                    "y": 0,
-                    "name": "delet_quiz_btn",
-                    "clip": true,
-                    "width": 25,
-                    "height": 25,
-                    "fill": "$background",
-                      "layout": "none",
-                      "children": [
-                        {
-                          "type": "ellipse",
-                          "id": "P8Ekv",
-                          "x": 0,
-                          "y": 2,
-                          "fill": "$surface",
-                          "width": 23,
-                          "height": 22
-                        },
-                        {
-                          "type": "text",
-                          "id": "j3nS3",
-                          "x": 6,
-                          "y": 2,
-                          "fill": "$text_secondary",
-                          "textGrowth": "fixed-width-height",
-                          "width": 6,
-                          "height": "fill_container(16)",
-                          "content": "X",
-                          "fontFamily": "Inter",
-                          "fontSize": 16,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                    "id": "cX4aE",
-                    "x": 5,
-                    "y": 0,
-                    "name": "edit_quiz_btn",
-                    "clip": true,
-                    "width": 25,
-                    "height": 25,
-                    "fill": "$background",
-                      "layout": "none",
-                      "children": [
-                        {
-                          "type": "ellipse",
-                          "id": "n88gQz",
-                          "x": 0,
-                          "y": 2,
-                          "fill": "$surface",
-                          "width": 23,
-                          "height": 22
-                        },
-                        {
-                          "type": "icon",
-                          "id": "s0la2s",
-                          "x": 3,
-                          "y": 4,
-                          "width": 15,
-                          "height": 17,
-                          "icon": "pencil",
-                          "library": "lucide",
-                          "fill": "$text_secondary"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "fPv4E",
-                  "name": "quiz_thumb",
-                  "context": "os botoes de edicao e exclusao devem aparecer apenas quando o mouser estiver em cima do componente \nao clicar o componente vai redirecionar para a pagina de detalhes da lead",
-                  "clip": true,
-                  "width": 137,
-                  "height": 87,
-                  "fill": "$background",
-                  "layout": "none",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "EDAFr",
-                      "x": 9,
-                      "y": 7,
-                      "name": "quiz_card",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 80,
-                      "stroke": "$background",
-                      "strokeWidth": 1,
-                      "strokeAlignment": "inner"
-                    },
-                    {
-                      "type": "rectangle",
-                      "id": "Kora0",
-                      "x": 9,
-                      "y": 52,
-                      "name": "quiz_card_tiitle",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 35
-                    },
-                    {
-                      "type": "text",
-                      "id": "tLdZr",
-                      "x": 49,
-                      "y": 52,
-                      "fill": "$text_secondary",
-                      "content": "titulo",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "vGkJS",
-                      "x": 49,
-                      "y": 68,
-                      "fill": "$text_secondary",
-                      "content": "data",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "frame",
-                    "id": "TE4wM",
-                    "x": 112,
-                    "y": 0,
-                    "name": "delet_quiz_btn",
-                    "clip": true,
-                    "width": 25,
-                    "height": 25,
-                    "fill": "$background",
-                      "layout": "none",
-                      "children": [
-                        {
-                          "type": "ellipse",
-                          "id": "FtIr5",
-                          "x": 0,
-                          "y": 2,
-                          "fill": "$surface",
-                          "width": 23,
-                          "height": 22
-                        },
-                        {
-                          "type": "text",
-                          "id": "mO7AZ",
-                          "x": 6,
-                          "y": 2,
-                          "fill": "$text_secondary",
-                          "textGrowth": "fixed-width-height",
-                          "width": 6,
-                          "height": "fill_container(16)",
-                          "content": "X",
-                          "fontFamily": "Inter",
-                          "fontSize": 16,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                    "id": "NMa2i",
-                    "x": 5,
-                    "y": 0,
-                    "name": "edit_quiz_btn",
-                    "clip": true,
-                    "width": 25,
-                    "height": 25,
-                    "fill": "$background",
-                      "layout": "none",
-                      "children": [
-                        {
-                          "type": "ellipse",
-                          "id": "U4e9O",
-                          "x": 0,
-                          "y": 2,
-                          "fill": "$surface",
-                          "width": 23,
-                          "height": 22
-                        },
-                        {
-                          "type": "icon",
-                          "id": "i3rsj",
-                          "x": 3,
-                          "y": 4,
-                          "width": 15,
-                          "height": 17,
-                          "icon": "pencil",
-                          "library": "lucide",
-                          "fill": "$text_secondary"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "kKxMs",
-                  "name": "quiz_thumb",
-                  "context": "os botoes de edicao e exclusao devem aparecer apenas quando o mouser estiver em cima do componente \nao clicar o componente vai redirecionar para a pagina de detalhes da lead",
-                  "clip": true,
-                  "width": 137,
-                  "height": 87,
-                  "fill": "$background",
-                  "layout": "none",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "etaJl",
-                      "x": 9,
-                      "y": 7,
-                      "name": "quiz_card",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 80,
-                      "stroke": "$background",
-                      "strokeWidth": 1,
-                      "strokeAlignment": "inner"
-                    },
-                    {
-                      "type": "rectangle",
-                      "id": "RuF0Y",
-                      "x": 9,
-                      "y": 52,
-                      "name": "quiz_card_tiitle",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 35
-                    },
-                    {
-                      "type": "text",
-                      "id": "guabu",
-                      "x": 49,
-                      "y": 52,
-                      "fill": "$text_secondary",
-                      "content": "titulo",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "L7quRG",
-                      "x": 49,
-                      "y": 68,
-                      "fill": "$text_secondary",
-                      "content": "data",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "frame",
-                    "id": "u40bMK",
-                    "x": 112,
-                    "y": 0,
-                    "name": "delet_quiz_btn",
-                    "clip": true,
-                    "width": 25,
-                    "height": 25,
-                    "fill": "$background",
-                      "layout": "none",
-                      "children": [
-                        {
-                          "type": "ellipse",
-                          "id": "Q6Ze1t",
-                          "x": 0,
-                          "y": 2,
-                          "fill": "$surface",
-                          "width": 23,
-                          "height": 22
-                        },
-                        {
-                          "type": "text",
-                          "id": "GE69L",
-                          "x": 6,
-                          "y": 2,
-                          "fill": "$text_secondary",
-                          "textGrowth": "fixed-width-height",
-                          "width": 6,
-                          "height": "fill_container(16)",
-                          "content": "X",
-                          "fontFamily": "Inter",
-                          "fontSize": 16,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                    "id": "L2wQt8",
-                    "x": 5,
-                    "y": 0,
-                    "name": "edit_quiz_btn",
-                    "clip": true,
-                    "width": 25,
-                    "height": 25,
-                    "fill": "$background",
-                      "layout": "none",
-                      "children": [
-                        {
-                          "type": "ellipse",
-                          "id": "fZ2Rr",
-                          "x": 0,
-                          "y": 2,
-                          "fill": "$surface",
-                          "width": 23,
-                          "height": 22
-                        },
-                        {
-                          "type": "icon",
-                          "id": "rIR50",
-                          "x": 3,
-                          "y": 4,
-                          "width": 15,
-                          "height": 17,
-                          "icon": "pencil",
-                          "library": "lucide",
-                          "fill": "$text_secondary"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "k4XrRr",
-                  "name": "quiz_thumb",
-                  "context": "os botoes de edicao e exclusao devem aparecer apenas quando o mouser estiver em cima do componente \nao clicar o componente vai redirecionar para a pagina de detalhes da lead",
-                  "clip": true,
-                  "width": 137,
-                  "height": 87,
-                  "fill": "$background",
-                  "layout": "none",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "hcge1",
-                      "x": 9,
-                      "y": 7,
-                      "name": "quiz_card",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 80,
-                      "stroke": "$background",
-                      "strokeWidth": 1,
-                      "strokeAlignment": "inner"
-                    },
-                    {
-                      "type": "rectangle",
-                      "id": "ppSwm",
-                      "x": 9,
-                      "y": 52,
-                      "name": "quiz_card_tiitle",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 35
-                    },
-                    {
-                      "type": "text",
-                      "id": "XXiCI",
-                      "x": 49,
-                      "y": 52,
-                      "fill": "$text_secondary",
-                      "content": "titulo",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "z9O5UY",
-                      "x": 49,
-                      "y": 68,
-                      "fill": "$text_secondary",
-                      "content": "data",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "frame",
-                    "id": "xJg9i",
-                    "x": 112,
-                    "y": 0,
-                    "name": "delet_quiz_btn",
-                    "clip": true,
-                    "width": 25,
-                    "height": 25,
-                    "fill": "$background",
-                      "layout": "none",
-                      "children": [
-                        {
-                          "type": "ellipse",
-                          "id": "JQ17q",
-                          "x": 0,
-                          "y": 2,
-                          "fill": "$surface",
-                          "width": 23,
-                          "height": 22
-                        },
-                        {
-                          "type": "text",
-                          "id": "lBqMm",
-                          "x": 6,
-                          "y": 2,
-                          "fill": "$text_secondary",
-                          "textGrowth": "fixed-width-height",
-                          "width": 6,
-                          "height": "fill_container(16)",
-                          "content": "X",
-                          "fontFamily": "Inter",
-                          "fontSize": 16,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                    "id": "t6ALNy",
-                    "x": 5,
-                    "y": 0,
-                    "name": "edit_quiz_btn",
-                    "clip": true,
-                    "width": 25,
-                    "height": 25,
-                    "fill": "$background",
-                      "layout": "none",
-                      "children": [
-                        {
-                          "type": "ellipse",
-                          "id": "oOTNz",
-                          "x": 0,
-                          "y": 2,
-                          "fill": "$surface",
-                          "width": 23,
-                          "height": 22
-                        },
-                        {
-                          "type": "icon",
-                          "id": "b9HIs",
-                          "x": 3,
-                          "y": 4,
-                          "width": 15,
-                          "height": 17,
-                          "icon": "pencil",
-                          "library": "lucide",
-                          "fill": "$text_secondary"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "lIdOw",
-                  "name": "quiz_thumb",
-                  "context": "os botoes de edicao e exclusao devem aparecer apenas quando o mouser estiver em cima do componente \nao clicar o componente vai redirecionar para a pagina de detalhes da lead",
-                  "clip": true,
-                  "width": 137,
-                  "height": 87,
-                  "fill": "$background",
-                  "layout": "none",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "Zl15s",
-                      "x": 9,
-                      "y": 7,
-                      "name": "quiz_card",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 80,
-                      "stroke": "$background",
-                      "strokeWidth": 1,
-                      "strokeAlignment": "inner"
-                    },
-                    {
-                      "type": "rectangle",
-                      "id": "M38Aj",
-                      "x": 9,
-                      "y": 52,
-                      "name": "quiz_card_tiitle",
-                      "fill": "$surface",
-                      "width": 118,
-                      "height": 35
-                    },
-                    {
-                      "type": "text",
-                      "id": "qc3HY",
-                      "x": 49,
-                      "y": 52,
-                      "fill": "$text_secondary",
-                      "content": "titulo",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "Hg7VF",
-                      "x": 49,
-                      "y": 68,
-                      "fill": "$text_secondary",
-                      "content": "data",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "frame",
-                    "id": "S9jaY",
-                    "x": 112,
-                    "y": 0,
-                    "name": "delet_quiz_btn",
-                    "clip": true,
-                    "width": 25,
-                    "height": 25,
-                    "fill": "$background",
-                      "layout": "none",
-                      "children": [
-                        {
-                          "type": "ellipse",
-                          "id": "ErANT",
-                          "x": 0,
-                          "y": 2,
-                          "fill": "$surface",
-                          "width": 23,
-                          "height": 22
-                        },
-                        {
-                          "type": "text",
-                          "id": "er28h",
-                          "x": 6,
-                          "y": 2,
-                          "fill": "$text_secondary",
-                          "textGrowth": "fixed-width-height",
-                          "width": 6,
-                          "height": "fill_container(16)",
-                          "content": "X",
-                          "fontFamily": "Inter",
-                          "fontSize": 16,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                    "id": "j8jSG",
-                    "x": 5,
-                    "y": 0,
-                    "name": "edit_quiz_btn",
-                    "clip": true,
-                    "width": 25,
-                    "height": 25,
-                    "fill": "$background",
-                      "layout": "none",
-                      "children": [
-                        {
-                          "type": "ellipse",
-                          "id": "W0ykKB",
-                          "x": 0,
-                          "y": 2,
-                          "fill": "$surface",
-                          "width": 23,
-                          "height": 22
-                        },
-                        {
-                          "type": "icon",
-                          "id": "q0obW",
-                          "x": 3,
-                          "y": 4,
-                          "width": 15,
-                          "height": 17,
-                          "icon": "pencil",
-                          "library": "lucide",
-                          "fill": "$text_secondary"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "id": "NMDN7",
+              "type": "ref",
+              "ref": "h89SPH",
+              "x": 10,
+              "y": 0
+            },
+            {
+              "id": "HS7ZT",
+              "type": "ref",
+              "ref": "h89SPH",
+              "x": 10,
+              "y": 83
+            },
+            {
+              "id": "V8tiUT",
+              "type": "ref",
+              "ref": "h89SPH",
+              "x": 10,
+              "y": 166
+            },
+            {
+              "id": "S1HaF",
+              "type": "ref",
+              "ref": "h89SPH",
+              "x": 10,
+              "y": 249
+            },
+            {
+              "id": "VGIl8",
+              "type": "ref",
+              "ref": "h89SPH",
+              "x": 10,
+              "y": 332
             }
           ]
         },
@@ -1124,8 +232,8 @@
     {
       "type": "frame",
       "id": "C50pVv",
-      "x": 1504,
-      "y": -413,
+      "x": 1533,
+      "y": 187,
       "name": "quiz_detail",
       "context": "pagina que aparece quando clica na thumbnail",
       "theme": {
@@ -1216,8 +324,8 @@
     {
       "type": "frame",
       "id": "mnpa0",
-      "x": 1504,
-      "y": 656,
+      "x": 546,
+      "y": 715,
       "name": "new_quiz_form",
       "context": "pagina que aparece quando clica no botao de novo quiz \né como o componente de detalhes mas seus campos sao inputs",
       "theme": {
@@ -1288,6 +396,410 @@
               "fontWeight": "normal"
             }
           ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "fdcqb",
+      "x": -718,
+      "y": 89,
+      "name": "tela de login",
+      "theme": {
+        "default": "dark"
+      },
+      "clip": true,
+      "width": 521,
+      "height": 499,
+      "fill": "$background",
+      "layout": "none",
+      "children": [
+        {
+          "id": "ow6DL",
+          "type": "ref",
+          "ref": "UPZ6Q",
+          "x": 89,
+          "y": 145,
+          "descendants": {
+            "w1lHB": {
+              "theme": {
+                "default": "dark"
+              },
+              "fill": "$surface"
+            },
+            "faeCd": {
+              "content": "username...",
+              "width": 114,
+              "height": "fit_content(38)",
+              "flipX": false,
+              "flipY": false,
+              "x": 40,
+              "y": 17,
+              "fill": "$text_secondary"
+            }
+          }
+        },
+        {
+          "id": "yBWQf",
+          "type": "ref",
+          "ref": "UPZ6Q",
+          "x": 89,
+          "y": 241,
+          "fill": "$surface",
+          "descendants": {
+            "w1lHB": {
+              "fill": "$surface"
+            },
+            "faeCd": {
+              "content": "senha..",
+              "fill": "$text_secondary"
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "Cw15W",
+          "x": 208,
+          "y": 383,
+          "name": "Frame 1",
+          "reusable": true,
+          "clip": true,
+          "width": 105,
+          "height": 56,
+          "fill": "#FFFFFF",
+          "layout": "none",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "Ogo68",
+              "x": 3,
+              "y": 4,
+              "fill": "#CCCCCC",
+              "width": 97,
+              "height": 49
+            },
+            {
+              "type": "text",
+              "id": "hUk9P",
+              "x": 29,
+              "y": 19,
+              "fill": "#000000",
+              "content": "clique",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "UPZ6Q",
+      "x": -644,
+      "y": -340,
+      "name": "text_input",
+      "reusable": true,
+      "clip": true,
+      "width": 344,
+      "height": 52,
+      "fill": "#FFFFFF",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "w1lHB",
+          "x": 5,
+          "y": 6,
+          "fill": "#CCCCCC",
+          "width": 427,
+          "height": 39
+        },
+        {
+          "type": "text",
+          "id": "faeCd",
+          "x": 40,
+          "y": 17,
+          "fill": "#000000",
+          "textGrowth": "fixed-width",
+          "width": 88,
+          "content": "digite aqui..",
+          "fontFamily": "Inter",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "id": "sIwwq",
+      "type": "ref",
+      "reusable": true,
+      "ref": "Cw15W",
+      "x": -644,
+      "y": -209,
+      "name": "button"
+    },
+    {
+      "id": "msK4q",
+      "type": "ref",
+      "reusable": true,
+      "ref": "xgisV",
+      "x": 21,
+      "y": -314
+    },
+    {
+      "type": "rectangle",
+      "id": "gQfwW",
+      "x": 31,
+      "y": -251,
+      "name": "hr",
+      "reusable": true,
+      "fill": "$surface",
+      "width": 687,
+      "height": 2
+    },
+    {
+      "type": "frame",
+      "id": "SBR6j",
+      "x": 31,
+      "y": -181,
+      "name": "quiz_card",
+      "reusable": true,
+      "clip": true,
+      "width": "fill_container(668)",
+      "height": 83,
+      "fill": "$background",
+      "stroke": "$surface",
+      "strokeWidth": {
+        "top": 1,
+        "bottom": 1
+      },
+      "strokeAlignment": "outer",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "EAgyM",
+          "name": "quiz_card_tittle",
+          "reusable": true,
+          "clip": true,
+          "width": 670,
+          "height": 55,
+          "fill": "$background",
+          "layout": "vertical",
+          "gap": 7,
+          "padding": [
+            0,
+            18
+          ],
+          "justifyContent": "space_around",
+          "children": [
+            {
+              "type": "text",
+              "id": "QV0Rh",
+              "fill": "$text_primary",
+              "content": "Titulo",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "y6bJj",
+              "fill": "$text_primary",
+              "textGrowth": "fixed-width",
+              "width": 640,
+              "content": "pergunta principal do quiz deve mostrar apenas a primeira linhas...",
+              "fontFamily": "Inter",
+              "fontSize": 16
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "c2jrIV",
+          "name": "quiz_card_metadata",
+          "reusable": true,
+          "clip": true,
+          "width": 669,
+          "height": 36,
+          "fill": "$background",
+          "justifyContent": "space_around",
+          "children": [
+            {
+              "type": "text",
+              "id": "FxbkR",
+              "fill": "$card",
+              "content": "data da criaçao",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "FZerv",
+              "fill": "$card",
+              "textGrowth": "fixed-width",
+              "width": "fit_content(148)",
+              "content": "nome do professor ",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "LLeSW",
+              "fill": "$card",
+              "textGrowth": "fixed-width",
+              "width": "fit_content(148)",
+              "content": "nome do professor ",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "h89SPH",
+      "x": 793,
+      "y": -185,
+      "name": "quiz_card_dinamic",
+      "reusable": true,
+      "clip": true,
+      "width": "fill_container(668)",
+      "height": 83,
+      "fill": "$background",
+      "stroke": "$surface",
+      "strokeWidth": {
+        "top": 2
+      },
+      "strokeAlignment": "outer",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "QLzTZ",
+          "x": 0,
+          "y": 0,
+          "name": "quiz_card_tittle",
+          "clip": true,
+          "width": "fill_container(668)",
+          "height": 55,
+          "fill": "$background",
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "NREXx",
+              "x": 18,
+              "y": 31.75,
+              "fill": "$text_primary",
+              "textGrowth": "fixed-width",
+              "width": 640,
+              "content": "pergunta principal do quiz deve mostrar apenas a primeira linhas...",
+              "fontFamily": "Inter",
+              "fontSize": 16
+            },
+            {
+              "type": "frame",
+              "id": "cNIlH",
+              "x": 6,
+              "y": 6,
+              "name": "dinamic_quiz_title",
+              "clip": true,
+              "width": 642,
+              "height": 26,
+              "fill": "$background",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "kdnxi",
+                  "type": "ref",
+                  "ref": "UgsOX",
+                  "x": 0,
+                  "y": -2.5,
+                  "fill": "$background"
+                },
+                {
+                  "type": "icon",
+                  "id": "k17V9p",
+                  "width": 44,
+                  "height": 24,
+                  "icon": "trash-2",
+                  "library": "lucide",
+                  "fill": "$text_primary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zlPl3",
+          "type": "ref",
+          "ref": "c2jrIV"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "nlCiI",
+      "x": 27,
+      "y": -777,
+      "name": "main",
+      "reusable": true,
+      "clip": true,
+      "width": "fill_container(691)",
+      "height": "fill_container(402)",
+      "fill": "$background",
+      "layout": "vertical",
+      "padding": [
+        0,
+        10
+      ],
+      "justifyContent": "space_around",
+      "alignItems": "center"
+    },
+    {
+      "type": "frame",
+      "id": "UgsOX",
+      "x": 793,
+      "y": -237,
+      "name": "editible_card_tittle",
+      "reusable": true,
+      "clip": true,
+      "width": 102,
+      "height": 31,
+      "fill": "#FFFFFF",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "dpSg9",
+          "x": 11,
+          "y": 7,
+          "fill": "$text_primary",
+          "textGrowth": "fixed-width-height",
+          "width": 48,
+          "height": 16,
+          "content": "Titulo",
+          "fontFamily": "Inter",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "icon",
+          "id": "WR7Hf",
+          "x": 59,
+          "y": 3,
+          "width": 36,
+          "height": 24,
+          "icon": "pen",
+          "library": "lucide",
+          "fill": "$text_primary"
         }
       ]
     }
@@ -1361,6 +873,23 @@
         },
         {
           "value": "#ffffff",
+          "theme": {
+            "default": "dark"
+          }
+        }
+      ]
+    },
+    "card": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#424242",
+          "theme": {
+            "default": "light"
+          }
+        },
+        {
+          "value": "#424242",
           "theme": {
             "default": "dark"
           }
