@@ -1,8 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { ConfigProvider, Layout, Switch, Space, Segmented, Spin } from 'antd'
 import { useTheme } from './hooks/useTheme'
-import { HomeGuest } from './pages/HomeGuest'
-import { HomeAdmin } from './pages/HomeAdmin'
+import { Home } from './components/Home'
 import { QuizDetail } from './pages/QuizDetail'
 import { NewQuizForm } from './pages/NewQuizForm'
 import { fetchQuizzes, deleteQuiz, type QuizResponse } from './services/quizApi'
@@ -107,17 +106,13 @@ function App() {
             <div style={{ textAlign: 'center', paddingTop: 80 }}>
               <Spin size="large" />
             </div>
-          ) : role === 'guest' ? (
-            <HomeGuest
-              quizzes={quizzes}
-              onQuizClick={(q) => { setSelectedQuiz(q); setPage('quiz-detail') }}
-            />
           ) : (
-            <HomeAdmin
+            <Home
+              role={role}
               quizzes={quizzes}
               onQuizClick={(q) => { setSelectedQuiz(q); setPage('quiz-detail') }}
-              onNewQuiz={() => setPage('new-quiz')}
-              onDelete={handleDelete}
+              onNewQuiz={role === 'admin' ? () => setPage('new-quiz') : undefined}
+              onDelete={role === 'admin' ? handleDelete : undefined}
             />
           )}
         </Layout.Content>

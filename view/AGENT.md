@@ -1,14 +1,27 @@
-# WHAT and WHY
-you job is to help me to implement the app_design.pen by implementing the design component as react + ant-d design components
-# DO
-- user ant-design components
-- read the ./app_desifn.pen this is the only file outside of the  ./quiz2llm/src/ that you can read
-- edit,delet,creat files as you please ONLY in inside of the  ./quiz2llm/src/ file 
-# ALWAYS ASK 
-- everything
-- about the features in design
-# TRY 
-- to use the leats of pure html posible try to reforce the use of ant-d components
-# DONT DO
-- any git related command
-- any operation out side of the react src app in ./quiz2llm/src/
+# FOLDER STRUCTURE
+```
+.view/
+    |-src -> core of react
+        |- assets -> .png,.jpeg and etc, to help enchance the components
+        |- components -> react components
+            |- AdminMenu.tsx -> Node ID: R6ZZu
+            |- CreateNewQuiz.tsx -> Node ID: t1W47
+            |- Footer -> .pen: Node ID: F92o8
+            |- Header -> .pen :  Node ID: msK4q
+            |- Home.tsx -> unified home, renders guest or admin based on role prop
+            |- QuizCard.tsx -> Node ID: SBR6j (guest list card)
+            |- QuizCardAdmin.tsx -> Node ID: h89SPH (admin list card)
+
+        |- pages
+            |- newquizform.tsx -> Node ID: mnpa0
+            |- quizdetail-> Node ID: C50pVv
+```
+
+# CURRENT STATE
+
+- `Home.tsx` is a single component that adapts based on `role` prop
+- Guest mode: Header -> list of QuizCard -> Footer
+- Admin mode: Header -> AdminMenu (3 tabs: Quizzes/Teachers/Answers) -> list of QuizCardAdmin + CreateNewQuiz -> Footer
+- Only the Quizzes tab has content; Teachers and Answers show Empty state
+- QuizThumb was removed (replaced by list-style QuizCard/QuizCardAdmin)
+- Icons in AdminMenu and QuizCardAdmin are placeholders (24x24 divs) - add them later
