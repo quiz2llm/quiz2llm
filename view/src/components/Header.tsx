@@ -1,10 +1,11 @@
-import { Typography, Space, Divider } from 'antd'
+import { Typography, Space, Divider, Button } from 'antd'
 
 interface HeaderProps {
   role: 'guest' | 'admin'
+  onLogin?: () => void
 }
 
-export function Header({ role }: HeaderProps) {
+export function Header({ role, onLogin }: HeaderProps) {
   return (
     <div style={{ padding: '8px 16px', background: 'transparent' }}>
       <Space
@@ -17,6 +18,13 @@ export function Header({ role }: HeaderProps) {
         <Typography.Title level={4} style={{ margin: 0 }}>
           quizes
         </Typography.Title>
+        {role === 'guest' ? (
+          <Button type="text" onClick={onLogin}>
+            login
+          </Button>
+        ) : (
+          <div style={{ width: 52 }} />
+        )}
       </Space>
       <Divider style={{ margin: '8px 0 0' }} />
     </div>

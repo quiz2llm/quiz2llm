@@ -3,9 +3,10 @@ import { PlusOutlined } from '@ant-design/icons'
 
 interface CreateNewQuizProps {
   onClick?: () => void
+  label?: string
 }
 
-export function CreateNewQuiz({ onClick }: CreateNewQuizProps) {
+export function CreateNewQuiz({ onClick, label = 'novo quiz' }: CreateNewQuizProps) {
   return (
     <Card
       hoverable
@@ -27,7 +28,7 @@ export function CreateNewQuiz({ onClick }: CreateNewQuizProps) {
         }}
       >
         <PlusOutlined />
-        <Typography.Text>novo quiz</Typography.Text>
+        <Typography.Text>{label}</Typography.Text>
       </div>
     </Card>
   )
