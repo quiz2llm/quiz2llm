@@ -13,7 +13,10 @@ export function useTheme() {
   const themeConfig = useMemo(
     () => ({
       algorithm: mode === 'dark' ? theme.darkAlgorithm : theme.defaultAlgorithm,
-      token: { colorPrimary: '#000000' },
+      token: {
+        colorPrimary: '#000000',
+        colorTextTertiary: '#424242',
+      },
     }),
     [mode],
   )

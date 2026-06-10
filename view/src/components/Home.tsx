@@ -2,7 +2,6 @@ import { useState, useMemo } from 'react'
 import { Empty, Flex } from 'antd'
 import { Header } from './Header'
 import { QuizCard } from './QuizCard'
-import { QuizCardAdmin } from './QuizCardAdmin'
 import { TeacherCard } from './TeacherCard'
 import { AnswerCard } from './AnswerCard'
 import { AdminMenu, type AdminTab } from './AdminMenu'
@@ -64,9 +63,9 @@ export function Home({ role, quizzes, onQuizClick, onNewQuiz, onDelete, onLogin 
             <QuizCard
               key={q.id}
               title={q.title}
-              question={q.main_text}
+              description={q.main_text}
               date={formatDate(q.when_created)}
-              professor={q.student}
+              author={q.student}
               onClick={() => onQuizClick(q)}
             />
           ))}
@@ -120,13 +119,13 @@ export function Home({ role, quizzes, onQuizClick, onNewQuiz, onDelete, onLogin 
     return (
       <Flex vertical gap={0} align="center">
         {quizzes.map((q) => (
-          <QuizCardAdmin
+          <QuizCard
             key={q.id}
             title={q.title}
-            question={q.main_text}
+            description={q.main_text}
             date={formatDate(q.when_created)}
-            professor={q.student}
-            showActions
+            author={q.student}
+            editable
             onClick={() => onQuizClick(q)}
             onDelete={() => onDelete?.(q.id)}
           />
