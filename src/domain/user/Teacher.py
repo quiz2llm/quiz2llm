@@ -9,6 +9,8 @@ class Teacher(User):
     __tablename__ = "teachers"
 
     id: Mapped[int] = mapped_column(ForeignKey("users.id"), primary_key=True)
+    password: Mapped[str] = mapped_column(String,nullable=False)
+    username: Mapped[str] = mapped_column(String, nullable=False)
 
     teacher_uuid: Mapped[str] = mapped_column(
         String(36),
