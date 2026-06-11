@@ -30,24 +30,3 @@ def get_teacher_by_id(
         return service.get_by_id(teacher_id, session)
     except ValueError:
         raise HTTPException(404, "teacher not found")
-
-
-@router.post('/promote', status_code=201)
-def promote_to_teacher(
-    payload: PromoteRequest,
-    session: Session = Depends(get_session),
-    admin_key: str = Header(alias="x-admin-key"),
-):
-    if admin_key != settings.TEACHER_PROMOTION_KEY:
-        raise HTTPException(403, "invalid admin key")
-
-    try:
-        teacher = service.promote_to_teacher(payload.user_id, session)
-        return teacher_response(
-            id=teacher.id,
-            teacher_uuid=teacher.teacher_uuid,
-            name=teacher.name,
-            role=teacher.role,
-        )
-    except ValueError as e:
-        raise HTTPException(404, str(e))

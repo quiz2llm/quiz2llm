@@ -44,11 +44,3 @@ def delete_quiz(quiz_id: str, session: Session = Depends(get_session)):
         service.delete_quiz(quiz_id, session)
     except ValueError:
         raise HTTPException(404, "Quiz not found")
-
-
-@router.patch("/{quiz_id}/answer", response_model=QuizResponse)
-def answer_quiz(quiz_id: str, session: Session = Depends(get_session)):
-    try:
-        return service.answer_quiz(quiz_id, session)
-    except ValueError:
-        raise HTTPException(404, "Quiz not found")
