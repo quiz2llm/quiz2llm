@@ -1,18 +1,15 @@
 from sqlalchemy.orm import Session
-from sqlalchemy import select
+from sqlalchemy import select, insert
+import uuid
 
-from src.app.controller.request.teacher_request import create_teacher, update_teacher
+from src.app.controller.request.teacher_request import update_teacher
+from src.domain.user.User import User
 from src.domain.user.Teacher import Teacher
+from src.domain.user.Student import Student
+from src.domain.user.Role import user_role
 
 
 class teacher_service:
-    def create(self, payload: create_teacher, session: Session) -> Teacher:
-        new_teacher = Teacher(**payload.model_dump())
-        session.add(new_teacher)
-        session.commit()
-        session.refresh(new_teacher)
-        return new_teacher
-
     def get_all(self, session: Session) -> list[Teacher]:
         return session.query(Teacher).all()
 
@@ -22,3 +19,24 @@ class teacher_service:
         if not this_teacher:
             raise ValueError("teacher not found")
         return this_teacher
+
+    def promote_to_teacher(self, user_id: int, session: Session) -> Teacher:
+        user = session.get(User, user_id)
+        if not user:
+            raise ValueError("user not found")
+
+        existing = session.get(Teacher, user_id)
+        if existing:
+            raise ValueError("user is already a teacher")
+
+        session.query(Student).filter(Student.id == user_id).delete()
+
+        teacher_uuid = str(uuid.uuid4())
+        session.execute(
+            insert(Teacher.__table__).values(id=user_id, teacher_uuid=teacher_uuid)
+        )
+
+        user.role = user_role.TEACHER
+        session.commit()
+        session.refresh(user)
+        return session.get(Teacher, user_id)
