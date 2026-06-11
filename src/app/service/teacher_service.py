@@ -19,24 +19,3 @@ class teacher_service:
         if not this_teacher:
             raise ValueError("teacher not found")
         return this_teacher
-
-    def promote_to_teacher(self, user_id: int, session: Session) -> Teacher:
-        user = session.get(User, user_id)
-        if not user:
-            raise ValueError("user not found")
-
-        existing = session.get(Teacher, user_id)
-        if existing:
-            raise ValueError("user is already a teacher")
-
-        session.query(Student).filter(Student.id == user_id).delete()
-
-        teacher_uuid = str(uuid.uuid4())
-        session.execute(
-            insert(Teacher.__table__).values(id=user_id, teacher_uuid=teacher_uuid)
-        )
-
-        user.role = user_role.TEACHER
-        session.commit()
-        session.refresh(user)
-        return session.get(Teacher, user_id)
