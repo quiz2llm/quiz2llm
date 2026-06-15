@@ -3,6 +3,8 @@ from src.domain.user.User import User
 from src.domain.user.Student import Student
 from src.infra.security.securitModel import user_credentials
 from src.infra.security.securityConfig import password_encoder
+from src.infra.security.token import token_service
+
 import datetime
 
 
@@ -30,23 +32,20 @@ class securityService:
             raise ValueError("usuário já existe")
 
         new_user = Student(name=username)
-        self.session.add(new_user)
-        self.session.flush()
+       #self.session.add(new_user)
+       #self.session.flush()
 
         hashed = password_encoder.hash_password(password)
-        creds = user_credentials(
-            user_id=new_user.student_uuid,
-            password=hashed,
-            last_password_change=datetime.datetime.now(),
-            fail_attempts=0,
-        )
-        self.session.add(creds)
-        self.session.commit()
-
-        response = {
-            "novo_usuario": new_user,
-            "hashed_password": password
-        }
-        print(response)
-        # return response
+       #creds = user_credentials(
+       #    user_id=new_user.student_uuid,
+       #    password=hashed,
+       #    last_password_change=datetime.datetime.now(),
+       #    fail_attempts=0,
+       #)
+       #self.session.add(creds)
+       #self.session.commit()
+        
+        token = token_service.create_acess_token(new_user)        
+    
+        return token
     

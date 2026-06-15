@@ -3,7 +3,6 @@ from sqlalchemy.orm import Session
 from pydantic import BaseModel
 
 from src.infra.db.session import get_session
-from src.infra.config.settings import settings
 from src.app.service.teacher_service import teacher_service
 from src.app.controller.response.teacher_response import teacher_response
 
