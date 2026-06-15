@@ -1,16 +1,11 @@
 from sqlalchemy.orm import Session
-
 from src.domain.user.User import User
 from src.domain.user.Student import Student
 from src.infra.security.securitModel import user_credentials
 from src.infra.security.securityConfig import password_encoder
-from src.main import oath2_scheme
-
 import datetime
 
 
-from fastapi import Depends
-from typing import Annotated
 class securityService:
     def __init__(self, session: Session):
         self.session = session
@@ -29,6 +24,8 @@ class securityService:
 
         return password_encoder.verify_password(password, creds.password)
 
+    def singup(self, username: str, password: str) -> Student:
+        user = self.get_by_username(username)
         if user:
             raise ValueError("usuário já existe")
 
@@ -46,9 +43,10 @@ class securityService:
         self.session.add(creds)
         self.session.commit()
 
-        return new_user
-
-        def get_curent_user(curent_user: Annotated=[str,Depends(oath2_scheme)]) -> User:
-            '''
-            '''
-            if
+        response = {
+            "novo_usuario": new_user,
+            "hashed_password": password
+        }
+        print(response)
+        # return response
+    

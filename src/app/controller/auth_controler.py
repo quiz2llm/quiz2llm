@@ -23,7 +23,9 @@ def signup(payload: SignupRequest, session: Session = Depends(get_session)):
     service = securityService(session)
     try:
         user = service.singup(payload.username, payload.password)
-        return {"id": user.id, "username": user.name, "role": user.role.value}
+        token = token_service.create_token(user.student_uuid,payload.password)
+
+        return token
     except ValueError as e:
         raise HTTPException(409, str(e))
 

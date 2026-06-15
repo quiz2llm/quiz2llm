@@ -9,3 +9,6 @@ def create_acess_token(password:str):
     token = jwt.encode(password,SECRET,ALGORITHM)
     return token
 
+def decode_token(token:str):
+    return jwt.decode(token,SECRET,ALGORITHM)
+
