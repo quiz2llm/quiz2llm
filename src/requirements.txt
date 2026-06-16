@@ -1,7 +1,12 @@
 alembic==1.18.4
-argon2-cffi==0.1.10
+argon2==0.1.10
+auto_mix_prep==0.2.0
 fastapi==0.137.1
 pydantic==2.13.4
 PyJWT==2.13.0
 python-dotenv==1.2.2
 SQLAlchemy==2.0.51
+
+PyMySql==1.2.0
+argon2-cffi==25.1.0
+fastapi[standard]

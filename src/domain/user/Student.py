@@ -11,9 +11,9 @@ class Student(User):
     id: Mapped[int] = mapped_column(ForeignKey("users.id"), primary_key=True)
 
     student_uuid: Mapped[str] = mapped_column(
-        String(32),
+        String,
         unique=True,
-        default=lambda: str(uuid.uuid4()).replace("-", ""),
+        default=lambda: str(uuid.uuid4()),
     )
 
     __mapper_args__ = {

@@ -125,16 +125,8 @@ npm run dev
 - "/{id}" # GET student by id
 
 **/teacher**
-- 
+- in progress
 
-# project product 
-simple quiz for test and study how model get , and retrive context from a text to awnser simple questions 
-
-# project actors
-teachers -> are users that create the quizes, they can:
-- create new quizes
-- consult their own quizes
-- edit and delete their quizes
-
-student -> are a actor for the users that anwser the quizes, they can do :
-- anser quizes from diferent teachers 
+# GITHUB REPO 
+> kani0dev/quiz2llm
+use the mcp in this repo

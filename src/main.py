@@ -15,5 +15,4 @@ app.add_middleware(
 )
 
 for router in routers:
-    print(router.routes)
     app.include_router(router)
