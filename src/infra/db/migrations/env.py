@@ -27,7 +27,6 @@ from src.infra.db.db import Base
 import src.domain.user.User          # noqa
 import src.domain.user.Student       # noqa
 import src.domain.user.Teacher       # noqa
-import src.domain.quiz_model         # noqa
 import src.infra.security.securitModel  # noqa
 target_metadata = Base.metadata
 
