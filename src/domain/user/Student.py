@@ -13,7 +13,7 @@ class Student(User):
     student_uuid: Mapped[str] = mapped_column(
         String,
         unique=True,
-        default=lambda: str(uuid.uuid4()),
+        default=lambda: str(uuid.uuid7()),
     )
 
     __mapper_args__ = {

@@ -1,22 +1,25 @@
-"""create table user_credentials
+"""create_table_user_credentials
 
-- Cria a tabela user_credentials para armazenar senhas hasheadas
-- FK para users(id) com delete em cascata
-- Colunas: user_id (PK+FK), password, last_password_change, fail_attempts
+Cria a tabela user_credentials para armazenar senhas hasheadas (Argon2)
+- user_id: PK + FK para users(id) com ON DELETE CASCADE
+- password: hash Argon2
+- last_password_change: data da última alteração
+- fail_attempts: contagem de tentativas falhas
 
-Revision ID: 8bc0857b4166
-Revises: e5ea94240770
-Create Date: 2026-06-11
+Revision ID: f60040853d77
+Revises: c4290d110035
+Create Date: 2026-06-17 16:04:22.796724
 
 """
 from typing import Sequence, Union
 
 from alembic import op
+import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '8bc0857b4166'
-down_revision: Union[str, Sequence[str], None] = 'e5ea94240770'
+revision: str = 'f60040853d77'
+down_revision: Union[str, Sequence[str], None] = 'c4290d110035'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
