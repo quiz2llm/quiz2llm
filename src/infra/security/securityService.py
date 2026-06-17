@@ -29,26 +29,21 @@ class securityService:
 
         return password_encoder.verify_password(password, creds.password)
 
-    def authenticate(self, username: str, password: str) -> Student | None:
+    def authenticate(self, username: str, password: str) -> User | None:
         user = self.get_by_username(username)
-        print(user)
-        if not user or user.role != user_role.STUDENT:
-            print('role excpetion')
+        if not user:
             return None
 
         creds = self.session.get(user_credentials, user.id)
-
         if not creds:
-            print('no cred :()')
             return None
 
         if not password_encoder.verify_password(password, creds.password):
-            print('smt')
             return None
 
         return user
 
-    def singup(self, username: str, password: str) -> Student:
+    def singup(self, username: str, password: str) -> str:
         user = self.get_by_username(username)
         if user:
             raise ValueError("usuário já existe")
