@@ -22,10 +22,10 @@
           "id": "ta243",
           "x": 36,
           "y": 48,
-          "name": "titulo",
+          "name": "title",
           "reusable": true,
           "fill": "$text_primary",
-          "content": "Titulo",
+          "content": "Title",
           "fontFamily": "Inter",
           "fontSize": 16,
           "fontWeight": "normal"
@@ -35,12 +35,12 @@
           "id": "UGSGs",
           "x": 27,
           "y": 103,
-          "name": "question",
+          "name": "question_text",
           "reusable": true,
           "fill": "$text_primary",
           "textGrowth": "fixed-width",
           "width": "fill_container(103)",
-          "content": "texto do quiz ",
+          "content": "quiz text",
           "fontFamily": "Inter",
           "fontSize": 16,
           "fontWeight": "normal"
@@ -50,7 +50,7 @@
           "id": "gV3Tm",
           "x": 0,
           "y": 156,
-          "name": "question_containers",
+          "name": "question_list",
           "clip": true,
           "width": "fill_container(464)",
           "height": 133,
@@ -66,7 +66,7 @@
               "type": "text",
               "id": "NIXSk",
               "fill": "$text_primary",
-              "content": "pergunta 1 ",
+              "content": "question 1",
               "fontFamily": "Inter",
               "fontSize": 16,
               "fontWeight": "normal"
@@ -75,7 +75,7 @@
               "type": "text",
               "id": "vL4RS",
               "fill": "$text_primary",
-              "content": "pergunta 1 ",
+              "content": "question 1",
               "fontFamily": "Inter",
               "fontSize": 16,
               "fontWeight": "normal"
@@ -84,7 +84,7 @@
               "type": "text",
               "id": "sNosY",
               "fill": "$text_primary",
-              "content": "pergunta 1 ",
+              "content": "question 1",
               "fontFamily": "Inter",
               "fontSize": 16,
               "fontWeight": "normal"
@@ -113,14 +113,14 @@
           "id": "K1K4T",
           "type": "ref",
           "ref": "ta243",
-          "content": "Titulo(input)",
+          "content": "Title (input)",
           "fill": "$text_primary"
         },
         {
           "id": "pLfO3",
           "type": "ref",
           "ref": "UGSGs",
-          "content": "texto do quiz (input)",
+          "content": "quiz text (input)",
           "fill": "$text_primary"
         },
         {
@@ -128,7 +128,7 @@
           "id": "R8yBi",
           "x": 0,
           "y": 156,
-          "name": "question_containers",
+          "name": "question_list",
           "clip": true,
           "width": "fill_container(464)",
           "height": 133,
@@ -144,7 +144,7 @@
               "type": "text",
               "id": "Vsb20",
               "fill": "$text_primary",
-              "content": "pergunta 1 ",
+              "content": "question 1",
               "fontFamily": "Inter",
               "fontSize": 16,
               "fontWeight": "normal"
@@ -153,7 +153,7 @@
               "type": "text",
               "id": "rjCz4",
               "fill": "$text_primary",
-              "content": "pergunta 1 ",
+              "content": "question 1",
               "fontFamily": "Inter",
               "fontSize": 16,
               "fontWeight": "normal"
@@ -162,7 +162,7 @@
               "type": "text",
               "id": "jE7KL",
               "fill": "$text_primary",
-              "content": "pergunta 1 ",
+              "content": "question 1",
               "fontFamily": "Inter",
               "fontSize": 16,
               "fontWeight": "normal"
@@ -176,7 +176,7 @@
       "id": "fdcqb",
       "x": -715,
       "y": 89,
-      "name": "tela de login",
+      "name": "login_screen",
       "theme": {
         "default": "dark"
       },
@@ -233,7 +233,7 @@
           "id": "Cw15W",
           "x": 208,
           "y": 383,
-          "name": "Frame 1",
+          "name": "button_primary",
           "reusable": true,
           "clip": true,
           "width": 105,
@@ -256,7 +256,7 @@
               "x": 29,
               "y": 19,
               "fill": "#000000",
-              "content": "clique",
+              "content": "click",
               "fontFamily": "Inter",
               "fontSize": 16,
               "fontWeight": "normal"
@@ -270,7 +270,7 @@
       "id": "NAKSU",
       "x": 3152.875,
       "y": 62,
-      "name": "home - adm view",
+      "name": "home_admin_view",
       "theme": {
         "default": "dark"
       },
@@ -298,7 +298,7 @@
         {
           "type": "frame",
           "id": "AltdQ",
-          "name": "main",
+          "name": "layout_content",
           "clip": true,
           "width": "fill_container",
           "fill": "$background",
@@ -320,569 +320,99 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "tTGGq",
-          "name": "quiz_card_dinamic",
-          "clip": true,
+          "type": "ref",
+          "ref": "h89SPH",
+          "x": 0,
+          "y": 0,
           "width": "fill_container",
-          "height": 83,
-          "fill": "$background",
-          "stroke": "$surface",
-          "strokeWidth": {
-            "top": 2
-          },
-          "strokeAlignment": "outer",
-          "layout": "none",
-          "children": [
-            {
-              "type": "frame",
-              "id": "kl5Gx",
-              "x": 0,
-              "y": 0,
-              "name": "quiz_card_tittle",
-              "clip": true,
-              "width": "fill_container(668)",
-              "height": 55,
-              "fill": "$background",
-              "layout": "none",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "kYc2S",
-                  "x": 18,
-                  "y": 31.75,
-                  "fill": "$text_primary",
-                  "textGrowth": "fixed-width",
-                  "width": 640,
-                  "content": "titulo do quiz ",
-                  "fontFamily": "Inter",
-                  "fontSize": 16,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "ioCzu",
-                  "x": 18,
-                  "y": 6,
-                  "name": "dinamic_quiz_title",
-                  "clip": true,
-                  "width": 642,
-                  "height": 26,
-                  "fill": "$background",
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "id": "F3eA6",
-                      "type": "ref",
-                      "ref": "UgsOX",
-                      "width": 119,
-                      "height": 31,
-                      "flipX": false,
-                      "flipY": false,
-                      "x": 0,
-                      "y": -2.5,
-                      "layout": "horizontal",
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "fill": "$background",
-                      "descendants": {
-                        "dpSg9": {
-                          "content": "Anwser",
-                          "width": "fill_container",
-                          "flipX": false,
-                          "flipY": false,
-                          "height": 16,
-                          "x": 0,
-                          "y": 7.5,
-                          "enabled": true,
-                          "name": "id_anwser"
-                        },
-                        "WR7Hf": {
-                          "enabled": true
-                        }
-                      }
-                    },
-                    {
-                      "type": "icon",
-                      "id": "M47b9a",
-                      "width": 44,
-                      "height": 24,
-                      "icon": "trash-2",
-                      "library": "lucide",
-                      "fill": "$text_primary"
-                    }
-                  ]
-                }
-              ]
+          "descendants": {
+            "NREXx": {
+              "content": "titulo do quiz "
             },
-            {
-              "id": "ygFq9",
-              "type": "ref",
-              "ref": "c2jrIV",
-              "descendants": {
-                "FxbkR": {
-                  "content": "nome do aluno "
-                },
-                "LLeSW": {
-                  "content": "data quando foi respondido",
-                  "fontSize": 12
-                }
-              }
+            "FxbkR": {
+              "content": "nome do aluno "
+            },
+            "LLeSW": {
+              "content": "data quando foi respondido",
+              "fontSize": 12
             }
-          ]
+          }
         },
         {
-          "type": "frame",
-          "id": "axYmv",
-          "name": "quiz_card_dinamic",
-          "clip": true,
+          "type": "ref",
+          "ref": "h89SPH",
+          "x": 0,
+          "y": 0,
           "width": "fill_container",
-          "height": 83,
-          "fill": "$background",
-          "stroke": "$surface",
-          "strokeWidth": {
-            "top": 2
-          },
-          "strokeAlignment": "outer",
-          "layout": "none",
-          "children": [
-            {
-              "type": "frame",
-              "id": "ZiqSt",
-              "x": 0,
-              "y": 0,
-              "name": "quiz_card_tittle",
-              "clip": true,
-              "width": "fill_container(668)",
-              "height": 55,
-              "fill": "$background",
-              "layout": "none",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "CmAtV",
-                  "x": 18,
-                  "y": 31.75,
-                  "fill": "$text_primary",
-                  "textGrowth": "fixed-width",
-                  "width": 640,
-                  "content": "titulo do quiz ",
-                  "fontFamily": "Inter",
-                  "fontSize": 16,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "b6hjYJ",
-                  "x": 18,
-                  "y": 6,
-                  "name": "dinamic_quiz_title",
-                  "clip": true,
-                  "width": 642,
-                  "height": 26,
-                  "fill": "$background",
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "id": "oN0XY",
-                      "type": "ref",
-                      "ref": "UgsOX",
-                      "width": 119,
-                      "height": 31,
-                      "flipX": false,
-                      "flipY": false,
-                      "x": 0,
-                      "y": -2.5,
-                      "layout": "horizontal",
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "fill": "$background",
-                      "descendants": {
-                        "dpSg9": {
-                          "content": "Anwser",
-                          "width": "fill_container",
-                          "flipX": false,
-                          "flipY": false,
-                          "height": 16,
-                          "x": 0,
-                          "y": 7.5,
-                          "enabled": true,
-                          "name": "id_anwser"
-                        },
-                        "WR7Hf": {
-                          "enabled": true
-                        }
-                      }
-                    },
-                    {
-                      "type": "icon",
-                      "id": "qhaYh",
-                      "width": 44,
-                      "height": 24,
-                      "icon": "trash-2",
-                      "library": "lucide",
-                      "fill": "$text_primary"
-                    }
-                  ]
-                }
-              ]
+          "descendants": {
+            "NREXx": {
+              "content": "titulo do quiz "
             },
-            {
-              "id": "FdslY",
-              "type": "ref",
-              "ref": "c2jrIV",
-              "descendants": {
-                "FxbkR": {
-                  "content": "nome do aluno "
-                },
-                "LLeSW": {
-                  "content": "data quando foi respondido",
-                  "fontSize": 12
-                }
-              }
+            "FxbkR": {
+              "content": "nome do aluno "
+            },
+            "LLeSW": {
+              "content": "data quando foi respondido",
+              "fontSize": 12
             }
-          ]
+          }
         },
         {
-          "type": "frame",
-          "id": "BsmHf",
-          "name": "quiz_card_dinamic",
-          "clip": true,
+          "type": "ref",
+          "ref": "h89SPH",
+          "x": 0,
+          "y": 0,
           "width": "fill_container",
-          "height": 83,
-          "fill": "$background",
-          "stroke": "$surface",
-          "strokeWidth": {
-            "top": 2
-          },
-          "strokeAlignment": "outer",
-          "layout": "none",
-          "children": [
-            {
-              "type": "frame",
-              "id": "Frd2k",
-              "x": 0,
-              "y": 0,
-              "name": "quiz_card_tittle",
-              "clip": true,
-              "width": "fill_container(668)",
-              "height": 55,
-              "fill": "$background",
-              "layout": "none",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "F8MhV",
-                  "x": 18,
-                  "y": 31.75,
-                  "fill": "$text_primary",
-                  "textGrowth": "fixed-width",
-                  "width": 640,
-                  "content": "titulo do quiz ",
-                  "fontFamily": "Inter",
-                  "fontSize": 16,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "fZmrk",
-                  "x": 18,
-                  "y": 6,
-                  "name": "dinamic_quiz_title",
-                  "clip": true,
-                  "width": 642,
-                  "height": 26,
-                  "fill": "$background",
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "id": "B7AC6",
-                      "type": "ref",
-                      "ref": "UgsOX",
-                      "width": 119,
-                      "height": 31,
-                      "flipX": false,
-                      "flipY": false,
-                      "x": 0,
-                      "y": -2.5,
-                      "layout": "horizontal",
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "fill": "$background",
-                      "descendants": {
-                        "dpSg9": {
-                          "content": "Anwser",
-                          "width": "fill_container",
-                          "flipX": false,
-                          "flipY": false,
-                          "height": 16,
-                          "x": 0,
-                          "y": 7.5,
-                          "enabled": true,
-                          "name": "id_anwser"
-                        },
-                        "WR7Hf": {
-                          "enabled": true
-                        }
-                      }
-                    },
-                    {
-                      "type": "icon",
-                      "id": "qo5BP",
-                      "width": 44,
-                      "height": 24,
-                      "icon": "trash-2",
-                      "library": "lucide",
-                      "fill": "$text_primary"
-                    }
-                  ]
-                }
-              ]
+          "descendants": {
+            "NREXx": {
+              "content": "titulo do quiz "
             },
-            {
-              "id": "rwmRE",
-              "type": "ref",
-              "ref": "c2jrIV",
-              "descendants": {
-                "FxbkR": {
-                  "content": "nome do aluno "
-                },
-                "LLeSW": {
-                  "content": "data quando foi respondido",
-                  "fontSize": 12
-                }
-              }
+            "FxbkR": {
+              "content": "nome do aluno "
+            },
+            "LLeSW": {
+              "content": "data quando foi respondido",
+              "fontSize": 12
             }
-          ]
+          }
         },
         {
-          "type": "frame",
-          "id": "c5wEHA",
-          "name": "quiz_card_dinamic",
-          "clip": true,
+          "type": "ref",
+          "ref": "h89SPH",
+          "x": 0,
+          "y": 0,
           "width": "fill_container",
-          "height": 83,
-          "fill": "$background",
-          "stroke": "$surface",
-          "strokeWidth": {
-            "top": 2
-          },
-          "strokeAlignment": "outer",
-          "layout": "none",
-          "children": [
-            {
-              "type": "frame",
-              "id": "GqC6K",
-              "x": 0,
-              "y": 0,
-              "name": "quiz_card_tittle",
-              "clip": true,
-              "width": "fill_container(668)",
-              "height": 55,
-              "fill": "$background",
-              "layout": "none",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "tj07d",
-                  "x": 18,
-                  "y": 31.75,
-                  "fill": "$text_primary",
-                  "textGrowth": "fixed-width",
-                  "width": 640,
-                  "content": "titulo do quiz ",
-                  "fontFamily": "Inter",
-                  "fontSize": 16,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "WjQ0z",
-                  "x": 18,
-                  "y": 6,
-                  "name": "dinamic_quiz_title",
-                  "clip": true,
-                  "width": 642,
-                  "height": 26,
-                  "fill": "$background",
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "id": "Z4WFI",
-                      "type": "ref",
-                      "ref": "UgsOX",
-                      "width": 119,
-                      "height": 31,
-                      "flipX": false,
-                      "flipY": false,
-                      "x": 0,
-                      "y": -2.5,
-                      "layout": "horizontal",
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "fill": "$background",
-                      "descendants": {
-                        "dpSg9": {
-                          "content": "Anwser",
-                          "width": "fill_container",
-                          "flipX": false,
-                          "flipY": false,
-                          "height": 16,
-                          "x": 0,
-                          "y": 7.5,
-                          "enabled": true,
-                          "name": "id_anwser"
-                        },
-                        "WR7Hf": {
-                          "enabled": true
-                        }
-                      }
-                    },
-                    {
-                      "type": "icon",
-                      "id": "lMKZp",
-                      "width": 44,
-                      "height": 24,
-                      "icon": "trash-2",
-                      "library": "lucide",
-                      "fill": "$text_primary"
-                    }
-                  ]
-                }
-              ]
+          "descendants": {
+            "NREXx": {
+              "content": "titulo do quiz "
             },
-            {
-              "id": "sjoKT",
-              "type": "ref",
-              "ref": "c2jrIV",
-              "descendants": {
-                "FxbkR": {
-                  "content": "nome do aluno "
-                },
-                "LLeSW": {
-                  "content": "data quando foi respondido",
-                  "fontSize": 12
-                }
-              }
+            "FxbkR": {
+              "content": "nome do aluno "
+            },
+            "LLeSW": {
+              "content": "data quando foi respondido",
+              "fontSize": 12
             }
-          ]
+          }
         },
         {
-          "type": "frame",
-          "id": "RWpUZ",
-          "name": "quiz_card_dinamic",
-          "clip": true,
+          "type": "ref",
+          "ref": "h89SPH",
+          "x": 0,
+          "y": 0,
           "width": "fill_container",
-          "height": 83,
-          "fill": "$background",
-          "stroke": "$surface",
-          "strokeWidth": {
-            "top": 2
-          },
-          "strokeAlignment": "outer",
-          "layout": "none",
-          "children": [
-            {
-              "type": "frame",
-              "id": "ttY2X",
-              "x": 0,
-              "y": 0,
-              "name": "quiz_card_tittle",
-              "clip": true,
-              "width": "fill_container(668)",
-              "height": 55,
-              "fill": "$background",
-              "layout": "none",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "DZH78",
-                  "x": 18,
-                  "y": 31.75,
-                  "fill": "$text_primary",
-                  "textGrowth": "fixed-width",
-                  "width": 640,
-                  "content": "titulo do quiz ",
-                  "fontFamily": "Inter",
-                  "fontSize": 16,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "Ei2av",
-                  "x": 18,
-                  "y": 6,
-                  "name": "dinamic_quiz_title",
-                  "clip": true,
-                  "width": 642,
-                  "height": 26,
-                  "fill": "$background",
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "id": "s2ZYT",
-                      "type": "ref",
-                      "ref": "UgsOX",
-                      "width": 119,
-                      "height": 31,
-                      "flipX": false,
-                      "flipY": false,
-                      "x": 0,
-                      "y": -2.5,
-                      "layout": "horizontal",
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "fill": "$background",
-                      "descendants": {
-                        "dpSg9": {
-                          "content": "Anwser",
-                          "width": "fill_container",
-                          "flipX": false,
-                          "flipY": false,
-                          "height": 16,
-                          "x": 0,
-                          "y": 7.5,
-                          "enabled": true,
-                          "name": "id_anwser"
-                        },
-                        "WR7Hf": {
-                          "enabled": true
-                        }
-                      }
-                    },
-                    {
-                      "type": "icon",
-                      "id": "fiXnv",
-                      "width": 44,
-                      "height": 24,
-                      "icon": "trash-2",
-                      "library": "lucide",
-                      "fill": "$text_primary"
-                    }
-                  ]
-                }
-              ]
+          "descendants": {
+            "NREXx": {
+              "content": "titulo do quiz "
             },
-            {
-              "id": "UpotL",
-              "type": "ref",
-              "ref": "c2jrIV",
-              "descendants": {
-                "FxbkR": {
-                  "content": "nome do aluno "
-                },
-                "LLeSW": {
-                  "content": "data quando foi respondido",
-                  "fontSize": 12
-                }
-              }
+            "FxbkR": {
+              "content": "nome do aluno "
+            },
+            "LLeSW": {
+              "content": "data quando foi respondido",
+              "fontSize": 12
             }
-          ]
+          }
         },
         {
           "id": "yQg7C",
@@ -910,7 +440,7 @@
       "id": "mSFI3",
       "x": 2145.625,
       "y": 62,
-      "name": "home - adm view",
+      "name": "home_admin_view_teachers",
       "theme": {
         "default": "dark"
       },
@@ -926,7 +456,7 @@
         {
           "type": "frame",
           "id": "n7RZL",
-          "name": "main",
+          "name": "layout_content",
           "clip": true,
           "width": "fill_container",
           "height": "fill_container",
@@ -1015,7 +545,7 @@
       "id": "Gmi3x",
       "x": 1139.375,
       "y": 62,
-      "name": "home - adm view",
+      "name": "home_admin_view_quizzes",
       "theme": {
         "default": "dark"
       },
@@ -1041,7 +571,7 @@
         {
           "type": "frame",
           "id": "gcyKF",
-          "name": "main",
+          "name": "layout_content",
           "reusable": true,
           "clip": true,
           "width": "fill_container",
@@ -1119,7 +649,7 @@
               "type": "text",
               "id": "LBwMG",
               "fill": "$text_primary",
-              "content": "novo quiz",
+              "content": "new quiz",
               "fontFamily": "Inter",
               "fontSize": 16,
               "fontWeight": "normal"
@@ -1140,7 +670,7 @@
       "id": "V7k8D",
       "x": 110.125,
       "y": 64.5,
-      "name": "home - guest view",
+      "name": "home_guest_view",
       "theme": {
         "default": "dark"
       },
@@ -1154,7 +684,7 @@
         {
           "type": "frame",
           "id": "n2z2s2",
-          "name": "main",
+          "name": "layout_content",
           "clip": true,
           "fill": "$background",
           "layout": "vertical",
@@ -1248,7 +778,7 @@
           "fill": "#000000",
           "textGrowth": "fixed-width",
           "width": 88,
-          "content": "digite aqui..",
+          "content": "type here...",
           "fontFamily": "Inter",
           "fontSize": 16,
           "fontWeight": "normal"
@@ -1270,7 +800,7 @@
       "id": "msK4q",
       "x": -234,
       "y": 1511,
-      "name": "header - home",
+      "name": "page_header",
       "theme": {},
       "reusable": true,
       "clip": true,
@@ -1288,11 +818,11 @@
         {
           "type": "text",
           "id": "aC3sc",
-          "name": "tittle",
+          "name": "title",
           "fill": "$text_primary",
           "textGrowth": "fixed-width",
           "width": "fill_container",
-          "content": "quizes",
+          "content": "quizzes",
           "fontFamily": "Inter",
           "fontSize": 16,
           "fontWeight": "normal"
@@ -1313,7 +843,7 @@
       "id": "gQfwW",
       "x": -224,
       "y": 1574,
-      "name": "hr",
+      "name": "divider",
       "reusable": true,
       "fill": "$surface",
       "width": 687,
@@ -1341,7 +871,7 @@
         {
           "type": "frame",
           "id": "EAgyM",
-          "name": "quiz_card_tittle",
+          "name": "quiz_card_title",
           "reusable": true,
           "clip": true,
           "width": 670,
@@ -1359,7 +889,7 @@
               "type": "text",
               "id": "QV0Rh",
               "fill": "$text_primary",
-              "content": "Titulo",
+              "content": "Title",
               "fontFamily": "Inter",
               "fontSize": 16,
               "fontWeight": "normal"
@@ -1392,7 +922,7 @@
               "type": "text",
               "id": "FxbkR",
               "fill": "$card",
-              "content": "data da criaçao",
+              "content": "creation date",
               "fontFamily": "Inter",
               "fontSize": 16,
               "fontWeight": "normal"
@@ -1403,7 +933,7 @@
               "fill": "$card",
               "textGrowth": "fixed-width",
               "width": "fit_content(148)",
-              "content": "nome do professor ",
+              "content": "professor name",
               "fontFamily": "Inter",
               "fontSize": 16,
               "fontWeight": "normal"
@@ -1414,7 +944,7 @@
               "fill": "$card",
               "textGrowth": "fixed-width",
               "width": "fit_content(148)",
-              "content": "nome do professor ",
+              "content": "professor name",
               "fontFamily": "Inter",
               "fontSize": 16,
               "fontWeight": "normal"
@@ -1428,7 +958,7 @@
       "id": "h89SPH",
       "x": 510,
       "y": 1642,
-      "name": "quiz_card_dinamic",
+      "name": "quiz_card_dynamic",
       "reusable": true,
       "clip": true,
       "width": "fill_container(668)",
@@ -1446,7 +976,7 @@
           "id": "QLzTZ",
           "x": 0,
           "y": 0,
-          "name": "quiz_card_tittle",
+          "name": "quiz_card_title",
           "clip": true,
           "width": "fill_container(668)",
           "height": 55,
@@ -1471,7 +1001,7 @@
               "id": "cNIlH",
               "x": 6,
               "y": 6,
-              "name": "dinamic_quiz_title",
+              "name": "dynamic_quiz_title",
               "clip": true,
               "width": 642,
               "height": 26,
@@ -1512,7 +1042,7 @@
       "id": "nlCiI",
       "x": -228,
       "y": 1048,
-      "name": "main",
+      "name": "layout_content",
       "reusable": true,
       "clip": true,
       "width": "fill_container(691)",
@@ -1531,7 +1061,7 @@
       "id": "UgsOX",
       "x": 510,
       "y": 1590,
-      "name": "editible_card_tittle",
+      "name": "editable_card_title",
       "reusable": true,
       "clip": true,
       "width": 102,
@@ -1548,7 +1078,7 @@
           "textGrowth": "fixed-width-height",
           "width": 48,
           "height": 16,
-          "content": "Titulo",
+          "content": "Title",
           "fontFamily": "Inter",
           "fontSize": 16,
           "fontWeight": "normal"
@@ -1571,7 +1101,7 @@
       "id": "R6ZZu",
       "x": 510,
       "y": 1772,
-      "name": "adimin_menu",
+      "name": "admin_menu",
       "reusable": true,
       "clip": true,
       "width": 659,
@@ -1670,7 +1200,7 @@
             {
               "type": "frame",
               "id": "iOXYE",
-              "name": "incon_text",
+              "name": "icon_text_about",
               "clip": true,
               "width": "fill_container",
               "height": 25,
@@ -1730,7 +1260,7 @@
       "id": "K99II",
       "x": 515,
       "y": 2195,
-      "name": "incon_text",
+      "name": "icon_text_github",
       "reusable": true,
       "clip": true,
       "width": 118,
@@ -1770,7 +1300,7 @@
       "id": "WeQ1e",
       "x": 515,
       "y": 2258,
-      "name": "incon_text",
+      "name": "icon_text_linkedin",
       "reusable": true,
       "clip": true,
       "width": 118,
@@ -1810,7 +1340,7 @@
       "id": "wOpKf",
       "x": 1243,
       "y": 1689,
-      "name": "quiz_card_dinamic",
+      "name": "teacher_card",
       "reusable": true,
       "clip": true,
       "width": "fill_container(697)",
@@ -1837,7 +1367,7 @@
         {
           "type": "frame",
           "id": "fFn58",
-          "name": "Frame 4",
+          "name": "teacher_card_body",
           "clip": true,
           "width": "fill_container",
           "height": 83,
@@ -1856,7 +1386,7 @@
               "type": "text",
               "id": "z1jZK",
               "fill": "$text_primary",
-              "content": "NOME DO PROFESSOR",
+              "content": "TEACHER NAME",
               "fontFamily": "Inter",
               "fontSize": 16,
               "fontWeight": "normal"
@@ -1880,7 +1410,7 @@
                   "type": "text",
                   "id": "v2vRNs",
                   "fill": "$card",
-                  "content": "data da criaçao",
+                  "content": "creation date",
                   "fontFamily": "Inter",
                   "fontSize": 16,
                   "fontWeight": "normal"
@@ -1891,7 +1421,7 @@
                   "fill": "$card",
                   "textGrowth": "fixed-width",
                   "width": "fit_content(148)",
-                  "content": "id do profesor",
+                  "content": "professor id",
                   "fontFamily": "Inter",
                   "fontSize": 16,
                   "fontWeight": "normal"
@@ -1902,7 +1432,7 @@
                   "fill": "$card",
                   "textGrowth": "fixed-width",
                   "width": "fit_content(148)",
-                  "content": "n quizes criados",
+                  "content": "quizzes count",
                   "fontFamily": "Inter",
                   "fontSize": 16,
                   "fontWeight": "normal"
@@ -1910,123 +1440,6 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "u0YgZV",
-      "x": 1992,
-      "y": 1696,
-      "name": "quiz_card_dinamic",
-      "reusable": true,
-      "clip": true,
-      "width": "fill_container(697)",
-      "height": 83,
-      "fill": "$background",
-      "stroke": "$surface",
-      "strokeWidth": {
-        "top": 2
-      },
-      "strokeAlignment": "outer",
-      "layout": "none",
-      "children": [
-        {
-          "type": "frame",
-          "id": "MK8OL",
-          "x": 0,
-          "y": 0,
-          "name": "quiz_card_tittle",
-          "reusable": true,
-          "clip": true,
-          "width": "fill_container(668)",
-          "height": 55,
-          "fill": "$background",
-          "layout": "none",
-          "children": [
-            {
-              "type": "text",
-              "id": "OTsMR",
-              "x": 18,
-              "y": 31.75,
-              "fill": "$text_primary",
-              "textGrowth": "fixed-width",
-              "width": 640,
-              "content": "titulo do quiz ",
-              "fontFamily": "Inter",
-              "fontSize": 16,
-              "fontWeight": "normal"
-            },
-            {
-              "type": "frame",
-              "id": "o4HPIv",
-              "x": 18,
-              "y": 6,
-              "name": "dinamic_quiz_title",
-              "clip": true,
-              "width": 642,
-              "height": 26,
-              "fill": "$background",
-              "justifyContent": "space_between",
-              "alignItems": "center",
-              "children": [
-                {
-                  "id": "QtF0b",
-                  "type": "ref",
-                  "ref": "UgsOX",
-                  "width": 119,
-                  "height": 31,
-                  "flipX": false,
-                  "flipY": false,
-                  "x": 0,
-                  "y": -2.5,
-                  "layout": "horizontal",
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
-                  "fill": "$background",
-                  "descendants": {
-                    "dpSg9": {
-                      "content": "Anwser_id",
-                      "width": "fill_container",
-                      "flipX": false,
-                      "flipY": false,
-                      "height": 16,
-                      "x": 0,
-                      "y": 7.5,
-                      "enabled": true,
-                      "name": "id_anwser"
-                    },
-                    "WR7Hf": {
-                      "enabled": true
-                    }
-                  }
-                },
-                {
-                  "type": "icon",
-                  "id": "T3ok8",
-                  "width": 44,
-                  "height": 24,
-                  "icon": "trash-2",
-                  "library": "lucide",
-                  "fill": "$text_primary"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "ADSQi",
-          "type": "ref",
-          "ref": "c2jrIV",
-          "descendants": {
-            "FxbkR": {
-              "content": "nome do aluno "
-            },
-            "LLeSW": {
-              "content": "data quando foi respondido",
-              "fontSize": 12
-            }
-          }
         }
       ]
     }

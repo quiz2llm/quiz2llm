@@ -24,6 +24,10 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parents[4]))
 
 from src.infra.db.db import Base
+import src.domain.user.User          # noqa
+import src.domain.user.Student       # noqa
+import src.domain.user.Teacher       # noqa
+import src.infra.security.securitModel  # noqa
 target_metadata = Base.metadata
 
 # other values from the config, defined by the needs of env.py,

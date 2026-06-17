@@ -1,24 +1,60 @@
-import { Typography, Button, Space, Divider } from 'antd'
-import { ArrowLeftOutlined } from '@ant-design/icons'
+import { useState } from 'react'
+import { Modal, Typography, Space, Button, Divider, message } from 'antd'
+import { answerQuiz } from '../services/quizApi'
 import type { Quiz } from '../App'
 
-interface QuizDetailProps {
-  quiz: Quiz
-  onBack: () => void
+interface QuizDetailModalProps {
+  open: boolean
+  quiz: Quiz | null
+  role: 'guest' | 'admin'
+  onClose: () => void
+  onAnswered?: () => void
 }
 
-export function QuizDetail({ quiz, onBack }: QuizDetailProps) {
-  return (
-    <div style={{ padding: '16px 24px' }}>
-      <Button
-        type="text"
-        icon={<ArrowLeftOutlined />}
-        onClick={onBack}
-        style={{ marginBottom: 16, padding: 0 }}
-      >
-        voltar
-      </Button>
+export function QuizDetailModal({ open, quiz, role, onClose, onAnswered }: QuizDetailModalProps) {
+  const [answering, setAnswering] = useState(false)
 
+  if (!quiz) return null
+
+  const submitAnswer = async () => {
+    setAnswering(true)
+    try {
+      await answerQuiz(quiz.id)
+      message.success('Resposta enviada com sucesso!')
+      onAnswered?.()
+      onClose()
+    } catch (err) {
+      message.error('Erro ao responder quiz')
+    } finally {
+      setAnswering(false)
+    }
+  }
+
+  const handleAnswer = () => {
+    if (quiz.when_answered !== null) {
+      Modal.confirm({
+        title: 'Responder novamente?',
+        content: 'Você já respondeu este quiz. Deseja enviar uma nova resposta?',
+        okText: 'Sim, responder novamente',
+        cancelText: 'Cancelar',
+        onOk: submitAnswer,
+      })
+    } else {
+      submitAnswer()
+    }
+  }
+
+  const isGuest = role === 'guest'
+
+  return (
+    <Modal
+      open={open}
+      onCancel={onClose}
+      footer={null}
+      width={464}
+      closable={false}
+      destroyOnClose
+    >
       <Typography.Title level={4} style={{ marginTop: 0 }}>
         {quiz.title}
       </Typography.Title>
@@ -27,21 +63,31 @@ export function QuizDetail({ quiz, onBack }: QuizDetailProps) {
         estudante: {quiz.student}
       </Typography.Text>
 
-      <Typography.Paragraph
-        style={{ marginBottom: 24, fontSize: 16, marginTop: 12 }}
-      >
+      <Typography.Paragraph style={{ marginBottom: 24, fontSize: 16, marginTop: 12 }}>
         {quiz.main_text}
       </Typography.Paragraph>
 
       <Divider />
 
-      <Space direction="vertical" size={12} style={{ width: '100%' }}>
+      <Space direction="vertical" size={12} style={{ width: '100%', marginBottom: 24 }}>
         {quiz.question?.map((q, i) => (
           <Typography.Text key={i} style={{ fontSize: 16 }}>
             {i + 1}. {q}
           </Typography.Text>
         ))}
       </Space>
-    </div>
+
+      {isGuest && (
+        <Button
+          type="primary"
+          size="large"
+          block
+          onClick={handleAnswer}
+          loading={answering}
+        >
+          {quiz.when_answered !== null ? 'responder novamente' : 'responder'}
+        </Button>
+      )}
+    </Modal>
   )
 }

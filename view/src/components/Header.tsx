@@ -1,4 +1,4 @@
-import { Typography, Space, Divider, Button } from 'antd'
+import { Layout, Typography, Space, Divider, Button } from 'antd'
 
 interface HeaderProps {
   role: 'guest' | 'admin'

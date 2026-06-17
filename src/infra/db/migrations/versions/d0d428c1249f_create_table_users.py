@@ -1,18 +1,25 @@
-"""create table users
+"""create_table_users
 
-Revision ID: ac468695bb28
-Revises: 27bca3cbedfd
-Create Date: 2026-06-06 20:02:12.415360
+Cria a tabela users com suporte a herança polimórfica (STUDENT/TEACHER)
+- id: chave primária auto-incremento
+- name: nome do usuário
+- create_at: data de criação
+- role: ENUM('STUDENT', 'TEACHER') para discriminação polimórfica
+
+Revision ID: d0d428c1249f
+Revises: 
+Create Date: 2026-06-17 16:02:26.675149
 
 """
 from typing import Sequence, Union
 
 from alembic import op
+import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = 'ac468695bb28'
-down_revision: Union[str, Sequence[str], None] = '27bca3cbedfd'
+revision: str = 'd0d428c1249f'
+down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 

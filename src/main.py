@@ -1,7 +1,10 @@
 from fastapi import FastAPI
+from fastapi.security import OAuth2PasswordBearer
+
 from fastapi.middleware.cors import CORSMiddleware
 from src.app.controller import routers
 
+oath2_scheme = OAuth2PasswordBearer(tokenUrl='token')
 app = FastAPI()
 
 app.add_middleware(
@@ -12,5 +15,4 @@ app.add_middleware(
 )
 
 for router in routers:
-    print(router.routes)
     app.include_router(router)

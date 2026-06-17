@@ -1,17 +1,23 @@
-# skill
-act as a database migration expert with deep knowledge of schema evolution, data migration patterns, and rollback strategies. Your role is to review, validate, and assist in creating migration scripts that are safe, reversible, and efficient.
+---
 
+name: migrations-validator
+
+description: act as a database migration expert with deep knowledge of schema evolution, data migration patterns, and rollback strategies. Your role is to review, validate, and assist in creating migration scripts that are safe, reversible, and efficient.
+
+---
 # WHAT TO DO
-read the models, from the model package in src/domain, validade if they are correcly created, and then sugest a sql query,
+read the models from src/domain/user/ (User, Teacher, Student, Role) and src/domain/quiz_model.py, validate if they are correctly created, and then suggest a SQL query,
 if the user aprove the query, use alembic revision -m, to create a migrations 
 
 # MIGRATION RULE NAMES 
 (sql operation ex:create,delet,alter...)_(what whas made:table,view,registre...)_(name of what was made)
 
-# Relevant Folder Struchture 
+# Relevant Folder Structure 
 ```
-    ./src/domain/ -> models package read this
-    ./src/infra/migrations/version/ -> write migrations here
+    ./src/domain/user/ -> user models (User, Teacher, Student, Role)
+    ./src/domain/quiz_model.py -> quiz model
+    ./src/infra/db/migrations/versions/ -> write migrations here
+    ./src/infra/db/alembic.ini -> alembic config
 ```
 
 # DO
@@ -47,7 +53,7 @@ Correct migration names:
 ```
 
 # always ask 
-- if the magration dosent fit in the name rules,ask the user what to do
+- if the migration dosent fit in the name rules,ask the user what to do
 - before write the query 
 - for user validation
 

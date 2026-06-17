@@ -2,22 +2,22 @@ import { useState, useEffect, useCallback } from 'react'
 import { ConfigProvider, Layout, Switch, Space, Segmented, Spin } from 'antd'
 import { useTheme } from './hooks/useTheme'
 import { Home } from './components/Home'
-import { QuizDetail } from './pages/QuizDetail'
 import { NewQuizForm } from './pages/NewQuizForm'
 import { LoginScreen } from './pages/LoginScreen'
+import { QuizDetailModal } from './pages/QuizDetail'
 import { fetchQuizzes, deleteQuiz, type QuizResponse } from './services/quizApi'
 
 export type { QuizResponse }
 export type Quiz = QuizResponse
 
 type Role = 'guest' | 'admin'
-type Page = 'home' | 'quiz-detail' | 'new-quiz' | 'login'
+type Page = 'home' | 'new-quiz' | 'login'
 
 function App() {
   const { mode, toggleTheme, themeConfig } = useTheme()
   const [role, setRole] = useState<Role>('guest')
   const [page, setPage] = useState<Page>('home')
-  const [selectedQuiz, setSelectedQuiz] = useState<Quiz | null>(null)
+  const [detailQuiz, setDetailQuiz] = useState<Quiz | null>(null)
   const [quizzes, setQuizzes] = useState<Quiz[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -47,18 +47,6 @@ function App() {
   }, [])
 
   const goHome = () => setPage('home')
-
-  if (page === 'quiz-detail' && selectedQuiz) {
-    return (
-      <ConfigProvider theme={themeConfig}>
-        <Layout style={{ minHeight: '100vh' }}>
-          <Layout.Content style={{ maxWidth: 700, margin: '0 auto', width: '100%' }}>
-            <QuizDetail quiz={selectedQuiz} onBack={goHome} />
-          </Layout.Content>
-        </Layout>
-      </ConfigProvider>
-    )
-  }
 
   if (page === 'new-quiz') {
     return (
@@ -123,7 +111,7 @@ function App() {
             <Home
               role={role}
               quizzes={quizzes}
-              onQuizClick={(q) => { setSelectedQuiz(q); setPage('quiz-detail') }}
+              onQuizClick={(q) => setDetailQuiz(q)}
               onNewQuiz={role === 'admin' ? () => setPage('new-quiz') : undefined}
               onDelete={role === 'admin' ? handleDelete : undefined}
               onLogin={() => setPage('login')}
@@ -131,6 +119,14 @@ function App() {
           )}
         </Layout.Content>
       </Layout>
+
+      <QuizDetailModal
+        open={!!detailQuiz}
+        quiz={detailQuiz}
+        role={role}
+        onClose={() => setDetailQuiz(null)}
+        onAnswered={loadQuizzes}
+      />
     </ConfigProvider>
   )
 }

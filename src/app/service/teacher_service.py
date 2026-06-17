@@ -1,18 +1,15 @@
 from sqlalchemy.orm import Session
-from sqlalchemy import select
+from sqlalchemy import select, insert
+import uuid
 
-from src.app.controller.request.teacher_request import create_teacher, update_teacher
+from src.app.controller.request.teacher_request import update_teacher
+from src.domain.user.User import User
 from src.domain.user.Teacher import Teacher
+from src.domain.user.Student import Student
+from src.domain.user.Role import user_role
 
 
 class teacher_service:
-    def create(self, payload: create_teacher, session: Session) -> Teacher:
-        new_teacher = Teacher(**payload.model_dump())
-        session.add(new_teacher)
-        session.commit()
-        session.refresh(new_teacher)
-        return new_teacher
-
     def get_all(self, session: Session) -> list[Teacher]:
         return session.query(Teacher).all()
 

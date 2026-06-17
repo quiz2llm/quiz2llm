@@ -1,0 +1,76 @@
+from sqlalchemy.orm import Session
+from src.domain.user.User import User
+from src.domain.user.Student import Student
+from src.domain.user.Role import user_role
+from src.infra.security.securitModel import user_credentials
+from src.infra.security.securityConfig import password_encoder
+from src.infra.security.token import token_service
+
+from datetime import datetime
+
+
+class securityService:
+    def __init__(self, session: Session):
+        self.session = session
+
+    def get_by_username(self, username: str) -> User | None:
+        user = self.session.query(User).filter(User.name == username).first()
+        print('user finded ',user)
+        return user
+
+    def verify_password(self, username: str, password: str) -> bool:
+        user = self.get_by_username(username)
+        if not user:
+            return False
+
+        creds = self.session.get(user_credentials, user.id)
+        if not creds:
+            return False
+
+        return password_encoder.verify_password(password, creds.password)
+
+    def authenticate(self, username: str, password: str) -> Student | None:
+        user = self.get_by_username(username)
+        print(user)
+        if not user or user.role != user_role.STUDENT:
+            print('role excpetion')
+            return None
+
+        creds = self.session.get(user_credentials, user.id)
+
+        if not creds:
+            print('no cred :()')
+            return None
+
+        if not password_encoder.verify_password(password, creds.password):
+            print('smt')
+            return None
+
+        return user
+
+    def singup(self, username: str, password: str) -> Student:
+        user = self.get_by_username(username)
+        if user:
+            raise ValueError("usuário já existe")
+
+        new_user = Student(name=username)
+        self.session.add(new_user)
+        # o flush serve para ''''pegar'''' um novo id.
+        self.session.flush()
+
+        hashed = password_encoder.hash_password(password)
+        print("ID NOVO USUARIO ",new_user.id)
+
+        creds = user_credentials(
+            user_id=new_user.id,
+            password=hashed,
+            last_password_change=datetime.now(),
+            fail_attempts=0,
+        )
+        self.session.add(creds)
+        self.session.commit()
+        print('SUPOSTAMENTE CRIADO')
+        token = token_service.create_acess_token(new_user)        
+    
+        return token
+    
