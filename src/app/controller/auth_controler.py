@@ -29,10 +29,11 @@ def signup(payload: Request, session: Session = Depends(get_session)):
 
 @router.post("/login")
 def login(payload: Request, session: Session = Depends(get_session)):
+    print(Request)
+
     service = securityService(session)
-
     user = service.authenticate(payload.username, payload.password)
-
+    print(user)
     if not user:
         raise HTTPException(
             status_code=401,
