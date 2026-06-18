@@ -87,16 +87,6 @@ uvicorn src.main:app --reload
 
 A API roda em `http://localhost:8000` — documentação interativa em `/docs`.
 
-### 3. Frontend
-
-```bash
-cd view
-npm install
-npm run dev
-```
-
-O frontend roda em `http://localhost:5173`. Requisições para `/quiz` são proxyadas para o backend.
-
 ## API
 
 ### Autenticação
@@ -127,19 +117,6 @@ O frontend roda em `http://localhost:5173`. Requisições para `/quiz` são prox
 |--------|------|---|---|---|
 | GET | `/teacher` | ✅ | Teacher | Listar professores |
 | GET | `/teacher/{uuid}` | ✅ | Teacher | Buscar professor por UUID |
-
-### Questionários (em implementação)
-
-| Método | Rota | Autenticação | Role | Descrição |
-|--------|------|---|---|---|
-| POST | `/quiz` | ✅ | Teacher | Criar questionário |
-| GET | `/quiz` | ✅ | Student, Teacher | Listar todos |
-| GET | `/quiz/{id}` | ✅ | Student, Teacher | Obter por ID |
-| PUT | `/quiz/{id}` | ✅ | Teacher | Atualizar |
-| DELETE | `/quiz/{id}` | ✅ | Teacher | Excluir |
-| POST | `/quiz/{id}/answer` | ✅ | Student, Teacher | Enviar resposta |
-| GET | `/quiz/{id}/answer` | ✅ | Student, Teacher | Listar respostas |
-
 ## Token JWT
 
 O token é autossuficiente — microserviços externos validam sem chamar esta API:
@@ -170,6 +147,3 @@ Payload contém:
 └── .env                     # Configuração do banco
 ```
 
-## ML Study (em planejamento)
-
-O objetivo final é utilizar os questionários cadastrados para avaliar a capacidade de diferentes LLM em compreender contexto, e utilizar esse contexto para classificar questionários respondidos.
