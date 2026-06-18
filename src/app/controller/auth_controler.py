@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from src.infra.db.session import get_session
 from src.infra.security.securityService import securityService
-from src.infra.security.token.token_service import create_acess_token, decode_token
+from src.infra.security.token.token_service import create_acess_token
 
 
 class Request(BaseModel):
@@ -20,14 +20,9 @@ def signup(payload: Request, session: Session = Depends(get_session)):
     service = securityService(session)
     try:
         token = service.singup(payload.username, payload.password)
-        decoded = decode_token(token)
         return {
             "access_token": token,
             "token_type": "bearer",
-            "sub": {
-                "username": decoded["username"],
-                "role": decoded["role"]
-            }
         }
     except ValueError as e:
         raise HTTPException(409, str(e))
@@ -44,13 +39,8 @@ def login(payload: Request, session: Session = Depends(get_session)):
         )
 
     token = create_acess_token(user)
-    decoded = decode_token(token)
 
     return {
         "access_token": token,
         "token_type": "bearer",
-        "sub": {
-            "username": decoded["username"],
-            "role": decoded["role"]
-        }
     }

@@ -6,7 +6,7 @@ Sistema full-stack para criação e gerenciamento de questionários, desenvolvid
 
 | Camada | Tecnologia |
 |--------|-----------|
-| Backend | Python · FastAPI · SQLAlchemy · Alembic |
+| Backend | Python · FastAPI · SQLAlchemy · Alembic · PyJWT · argon2 |
 | Frontend | React · TypeScript · Vite · Ant Design |
 | Database | MySQL |
 | Infra | Docker · docker-compose |
@@ -14,11 +14,10 @@ Sistema full-stack para criação e gerenciamento de questionários, desenvolvid
 
 ## Funcionalidades
 
-- CRUD completo de questionários (título, texto base, perguntas)
-- Visualização **convidado** (somente leitura)
-- Visualização **administrador** (criar, editar e excluir)
-- Alternância de papéis (Guest / Admin) em tempo real
-- Tema claro/escuro
+- Autenticação JWT com roles (Student / Teacher)
+- Token autossuficiente para validação em microserviços (contém `sub`, `username`, `role`)
+- CRUD de estudantes e professores
+- CRUD de questionários (em implementação)
 - API REST documentada com Swagger
 
 ## Arquitetura
@@ -27,17 +26,38 @@ Sistema full-stack para criação e gerenciamento de questionários, desenvolvid
 src/                         # Backend Python/FastAPI
 ├── main.py                  # Entrada da aplicação
 ├── app/
-│   ├── controller/          # Rotas e schemas Pydantic
+│   ├── controller/          # Rotas FastAPI
+│   │   ├── auth_controler.py
+│   │   ├── studant_controller.py
+│   │   ├── teacher_controller.py
+│   │   ├── request/         # Schemas Pydantic de input
+│   │   └── response/        # Schemas Pydantic de output
 │   └── service/             # Lógica de negócio
-├── domain/                  # Modelos SQLAlchemy (Quiz, User, Student, Teacher)
-└── infra/db/                # Engine, sessão, migrações Alembic
+│       ├── student_service.py
+│       └── teacher_service.py
+├── domain/                  # Modelos SQLAlchemy
+│   ├── quiz_model.py
+│   └── user/
+│       ├── Role.py          # Enum STUDENT=1, TEACHER=2
+│       ├── User.py
+│       ├── Student.py
+│       └── Teacher.py
+└── infra/
+    ├── db/                  # Engine, sessão, migrações Alembic
+    └── security/
+        ├── securitModel.py      # user_credentials table
+        ├── securityConfig.py    # Password hashing (argon2)
+        ├── securityService.py   # Autenticação e signup
+        ├── auth_dependency.py   # get_current_user, require_role
+        └── token/
+            └── token_service.py # Criação e decode de JWT
 
 view/                        # Frontend React/TypeScript
-└── src/
-    ├── components/          # Componentes reutilizáveis
-    ├── pages/               # Páginas da aplicação
-    ├── hooks/               # Hooks personalizados
-    └── services/            # Cliente HTTP (axios)
+└── src/                     # (diretório separado)
+    ├── components/
+    ├── pages/
+    ├── hooks/
+    └── services/
 ```
 
 ## Pré-requisitos
@@ -52,13 +72,15 @@ view/                        # Frontend React/TypeScript
 
 ```bash
 cp .env.example .env   # configure as credenciais
-docker-compose up -d   # inicia MySQL
+docker compose up -d   # inicia MySQL
 ```
 
 ### 2. Backend
 
 ```bash
+python -m venv .venv
 source .venv/bin/activate
+pip install -r src/requirements.txt
 alembic -c src/infra/db/alembic.ini upgrade head
 uvicorn src.main:app --reload
 ```
@@ -77,27 +99,77 @@ O frontend roda em `http://localhost:5173`. Requisições para `/quiz` são prox
 
 ## API
 
+### Autenticação
+
 | Método | Rota | Descrição |
 |--------|------|-----------|
-| POST | `/quiz` | Criar questionário |
-| GET | `/quiz` | Listar todos |
-| GET | `/quiz/{id}` | Obter por ID |
-| PUT | `/quiz/{id}` | Atualizar |
-| DELETE | `/quiz/{id}` | Excluir |
-| PATCH | `/quiz/{id}/answer` | Marcar como respondido |
+| POST | `/auth/signup` | Criar conta Student |
+| POST | `/auth/login` | Login (Student ou Teacher) |
+
+**Response:**
+```json
+{
+  "access_token": "jwt_token...",
+  "token_type": "bearer"
+}
+```
+
+### Estudantes
+
+| Método | Rota | Autenticação | Role | Descrição |
+|--------|------|---|---|---|
+| GET | `/student` | ✅ | Student | Listar estudantes |
+| GET | `/student/{uuid}` | ✅ | Student | Buscar estudante por UUID |
+
+### Professores
+
+| Método | Rota | Autenticação | Role | Descrição |
+|--------|------|---|---|---|
+| GET | `/teacher` | ✅ | Teacher | Listar professores |
+| GET | `/teacher/{uuid}` | ✅ | Teacher | Buscar professor por UUID |
+
+### Questionários (em implementação)
+
+| Método | Rota | Autenticação | Role | Descrição |
+|--------|------|---|---|---|
+| POST | `/quiz` | ✅ | Teacher | Criar questionário |
+| GET | `/quiz` | ✅ | Student, Teacher | Listar todos |
+| GET | `/quiz/{id}` | ✅ | Student, Teacher | Obter por ID |
+| PUT | `/quiz/{id}` | ✅ | Teacher | Atualizar |
+| DELETE | `/quiz/{id}` | ✅ | Teacher | Excluir |
+| POST | `/quiz/{id}/answer` | ✅ | Student, Teacher | Enviar resposta |
+| GET | `/quiz/{id}/answer` | ✅ | Student, Teacher | Listar respostas |
+
+## Token JWT
+
+O token é autossuficiente — microserviços externos validam sem chamar esta API:
+
+```python
+import jwt
+payload = jwt.decode(token, SECRET, algorithms=["HS256"])
+# payload: { sub, username, role, exp }
+```
+
+Payload contém:
+| Campo | Descrição |
+|-------|-----------|
+| `sub` | UUID do usuário (student_uuid ou teacher_uuid) |
+| `username` | Nome do usuário |
+| `role` | `1` (STUDENT) ou `2` (TEACHER) |
+| `exp` | Timestamp de expiração |
 
 ## Estrutura do Projeto
 
 ```
 ├── docker-compose.yaml      # Serviço MySQL
 ├── doc/
+│   ├── opencode/            # Documentação opencode
 │   └── system-design.drawio # Diagrama da arquitetura
 ├── src/                     # Backend
-├── view/                    # Frontend
-│   └── .pencil/             # Design system (Pencil)
+├── view/                    # Frontend (diretório separado)
 └── .env                     # Configuração do banco
 ```
 
 ## ML Study (em planejamento)
 
-O objetivo final é utilizar os questionários cadastrados para avaliar a capacidade de diferentes LLM em compreender contexto, e utilizar esse contexto para classificar questionários respondidos .
+O objetivo final é utilizar os questionários cadastrados para avaliar a capacidade de diferentes LLM em compreender contexto, e utilizar esse contexto para classificar questionários respondidos.
