@@ -1,12 +1,18 @@
+import os
 from datetime import datetime, timezone, timedelta
+from dotenv import load_dotenv
+
 from src.domain.user.User import User
 from src.domain.user.Student import Student
 from src.domain.user.Teacher import Teacher
 import jwt
 
-SECRET='jaja'
-ALGORITHM = 'HS256'
-TOKEN_EXPIRE_MINUTES = 60
+load_dotenv()
+
+SECRET = os.getenv('JWT_SECRET')
+ALGORITHM = os.getenv('JWT_ALGORITHM')
+TOKEN_EXPIRE_MINUTES = os.getenv('JWT_EXPIRE')
+
 
 def create_acess_token(user: User):
     expire = datetime.now(timezone.utc) + timedelta(minutes=TOKEN_EXPIRE_MINUTES)
