@@ -64,7 +64,6 @@ class securityService:
         )
         self.session.add(creds)
         self.session.commit()
-        print('SUPOSTAMENTE CRIADO')
         token = token_service.create_acess_token(new_user)        
     
         return token
