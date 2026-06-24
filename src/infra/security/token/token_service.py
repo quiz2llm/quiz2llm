@@ -12,8 +12,7 @@ load_dotenv()
 
 SECRET = os.getenv('JWT_SECRET')
 ALGORITHM = os.getenv('JWT_ALGORITHM')
-TOKEN_EXPIRE_MINUTES = os.getenv('JWT_EXPIRE')
-TOKEN_EXPIRE_MINUTES = int(TOKEN_EXPIRE_MINUTES)
+TOKEN_EXPIRE_MINUTES = int(os.getenv('JWT_EXPIRE', '30'))
 
 
 def create_acess_token(user: User):

@@ -53,7 +53,7 @@ def run_migrations_offline() -> None:
     load_dotenv()
     from os import getenv
 
-    url = config.get_main_option("sqlalchemy.url",f"mysql+pymysql://{getenv('DB_USER')}:{getenv('DB_PASS')}@{getenv('HOST')}:{getenv('DB_PORT')}/{getenv('DB_NAME')}")
+    url = config.get_main_option("sqlalchemy.url",f"mysql+pymysql://{getenv('DB_USER','quiz2llm')}:{getenv('DB_PASS','quiz2llm_pass')}@{getenv('HOST','localhost')}:{getenv('DB_PORT','3306')}/{getenv('DB_NAME','quiz2llm')}")
     context.configure(
         url=url,
         target_metadata=target_metadata,
@@ -70,7 +70,7 @@ def run_migrations_online() -> None:
     load_dotenv()
     from os import getenv
 
-    url = f"mysql+pymysql://{getenv('DB_USER')}:{getenv('DB_PASS')}@{getenv('HOST')}:{getenv('DB_PORT')}/{getenv('DB_NAME')}"
+    url = f"mysql+pymysql://{getenv('DB_USER','quiz2llm')}:{getenv('DB_PASS','quiz2llm_pass')}@{getenv('HOST','localhost')}:{getenv('DB_PORT','3306')}/{getenv('DB_NAME','quiz2llm')}"
     connectable = create_engine(url, poolclass=pool.NullPool)
 
     with connectable.connect() as connection:

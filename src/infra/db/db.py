@@ -3,11 +3,11 @@ from dotenv import load_dotenv
 load_dotenv()
 import os
 
-DB_USER = os.getenv("DB_USER")
-DB_PASS = os.getenv("DB_PASS")
-HOST = os.getenv("HOST")
-DB_PORT = os.getenv("DB_PORT")
-DB_NAME = os.getenv("DB_NAME")
+DB_USER = os.getenv("DB_USER", "quiz2llm")
+DB_PASS = os.getenv("DB_PASS", "quiz2llm_pass")
+HOST = os.getenv("HOST", "localhost")
+DB_PORT = os.getenv("DB_PORT", "3306")
+DB_NAME = os.getenv("DB_NAME", "quiz2llm")
 
 def get_conection():
     try:
