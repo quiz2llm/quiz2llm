@@ -2,7 +2,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import String, ForeignKey
 from .User import User
 from .Role import user_role
-import uuid
+import uuid_utils as uuid
 
 
 class Student(User):
