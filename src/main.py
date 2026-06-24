@@ -7,12 +7,14 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from src.app.controller import routers
 
+def run_migration():
+    alembic_cfg = Config("src/infra/db/alembic.ini")
+    command.upgrade(alembic_cfg, "head")
+    yield
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Roda as migrations do Alembic na inicialização do container
-    alembic_cfg = Config("src/infra/db/alembic.ini")
-    command.upgrade(alembic_cfg, "head")
+    run_migration()
     yield
 
 
