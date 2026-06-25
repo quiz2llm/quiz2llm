@@ -12,4 +12,4 @@ COPY src/ ./src/
 EXPOSE 8000
 
 # O Uvicorn chama a partir da pasta src
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["sh", "-c", "alembic -c src/infra/db/alembic.ini upgrade head && uvicorn src.main:app --host 0.0.0.0 --port 8000"]

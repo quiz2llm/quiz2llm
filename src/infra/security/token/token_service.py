@@ -32,7 +32,7 @@ def create_acess_token(user: User):
         "role": user.role.value,
         "exp": int(expire.timestamp())
     }
-
+    print(payload)
     token = jwt.encode(payload, SECRET, algorithm=ALGORITHM)
     return token
 
